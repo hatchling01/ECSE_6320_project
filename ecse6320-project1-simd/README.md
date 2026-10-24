@@ -197,4 +197,4 @@ SIMD materially improved several independent kernels for small and intermediate 
 
 ## AI Use
 
-Codex assisted with repository setup, implementation, scripts, debugging, analysis/plotting, and documentation. AI-generated code and interpretations were checked against correctness results, compiler diagnostics, disassembly, preserved raw measurements, and uProf evidence. AI output is not a measurement source, and no Phase 6 benchmark or profile was generated. The project’s disclosure is recorded in [docs/ai_use.md](docs/ai_use.md).
+Codex assisted with implementation, automation, plotting, and analysis drafting; generated outputs were independently tested against correctness checks, compiler diagnostics and disassembly, raw data, and available uProf evidence. AI output is not a measurement source, and no Phase 6 benchmark or profile was generated. See [docs/ai_use.md](docs/ai_use.md) for the full disclosure.

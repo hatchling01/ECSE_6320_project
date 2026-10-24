@@ -156,4 +156,4 @@ The tested stack transitions from QD-limited scaling to a QD16 knee, reaches 171
 
 ## 22. AI-use statement
 
-Codex assisted with safety scripting, experiment orchestration, parsing, plotting, statistics, repository organization, and analysis drafting. Claims are grounded in retained FIO JSON, repeated measurements, target validation, and regenerable summaries; AI did not independently verify internal SSD behavior. See [docs/ai_use.md](docs/ai_use.md).
+Codex assisted with safety scripting, FIO configuration, automation, plotting, statistics, and analysis drafting; generated outputs were independently tested against target-safety checks, retained FIO JSON, repeated measurements, and parser/tool evidence. AI did not independently verify internal SSD behavior. See [docs/ai_use.md](docs/ai_use.md) for the full disclosure.

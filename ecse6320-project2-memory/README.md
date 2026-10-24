@@ -148,6 +148,6 @@ The hierarchy ordering is clear; sequential locality and 64-byte stride dominate
 
 ## 26. AI-use statement
 
-Codex assisted with implementation, automation, validation, plotting and drafting. Claims trace to retained measurements and reports, not invented hardware details. [Full disclosure](docs/ai_use.md).
+Codex assisted with implementation, automation, plotting, and analysis drafting; generated outputs were independently tested against correctness/resource checks, affinity and timing validation, raw data, and available uProf evidence. Claims do not rely on invented hardware details. See [docs/ai_use.md](docs/ai_use.md) for the full disclosure.
 
 Final indexes: [figures](results/plots/FINAL_FIGURES.md), [tables](results/tables/FINAL_TABLES.md), [requirement audit](docs/final_requirement_audit.md).
