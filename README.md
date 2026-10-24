@@ -78,6 +78,23 @@ Increasing concurrency improved SSD utilization until diminishing throughput ret
 
 ![Project 3 SSD throughput-latency knee](ecse6320-project3-ssd/results/plots/phase5_throughput_latency_knee.png)
 
+## Cross-Layer Takeaway
+
+Across our experiments on the Ryzen 9 9950X system, performance improved when additional parallelism could hide latency and keep the next data-supply layer busy, but those gains diminished once that layer became the bottleneck. SIMD produced a 6.138× speedup for a small working set but only 0.969× at 128 MiB; the memory study helps explain that loss of advantage, with dependent-load latency rising from 1.262 ns in an L1-representative regime to 111.876 ns for DRAM-sensitive access and 64-byte useful read bandwidth falling from 29.234 GiB/s sequentially to 2.641 GiB/s under random access. At the storage layer, increasing NVMe queue depth showed an analogous saturation effect: moving from QD16 to QD32 delivered only 9.6% more IOPS while mean completion latency increased by 49.2%. SIMD width, memory-worker concurrency, and SSD queue depth are different mechanisms, but together the measurements support a common systems-level conclusion: **locality determines which layer supplies the data, while parallelism hides latency only until that supplying resource becomes saturated.**
+
+| Layer | Our measured evidence | Interpretation |
+| --- | --- | --- |
+| CPU / SIMD | Native SIMD speedup: **6.138×** for the small working set, **2.652×** at the intermediate size, but **0.969×** at 128 MiB | Wider execution helps strongly while operands can be supplied efficiently; the advantage collapses when data supply dominates |
+| Cache / DRAM | **1.262 ns** L1, **3.328 ns** L2, **11.973 ns** LLC, **111.876 ns** DRAM-sensitive | Moving down the hierarchy dramatically increases the cost of supplying each dependent load |
+| Memory locality | 64-B reads: **29.234 GiB/s sequential** vs **2.641 GiB/s random** | Locality and prefetchability strongly determine attainable useful bandwidth |
+| Memory concurrency | Worker bandwidth increased **3.713 → 35.199 GiB/s**, while probe latency increased **123.868 → 193.454 ns** | Additional concurrency exposes substantially more bandwidth but also raises contention and latency; our predefined memory-knee criterion was not reached |
+| NVMe concurrency | QD16→QD32: only **+9.6% IOPS**, but **+49.2% mean latency** | Beyond the measured SSD knee, more queueing primarily increases latency rather than throughput |
+| Layer identification | SSD direct read **630.5 MiB/s** vs immediate buffered second pass **7,420.3 MiB/s** | A benchmark can appear dramatically faster simply because a different hierarchy level—the host page cache—is serving the request |
+
+The practical implication is that optimization must target the layer currently limiting data delivery: increasing compute width, memory concurrency, or I/O concurrency cannot indefinitely overcome a bottleneck in the layer beneath it.
+
+The separate Mac implementation provides a useful cross-platform test of which of these trends are architecture-independent and which depend on the specific cache, memory, and scheduling organization.
+
 ## Reproducibility
 
 Each project contains source code, scripts, raw and processed data, plots, tables, methodology, environment records, and reproduction information. Start with the [Project 1 methodology](ecse6320-project1-simd/docs/methodology.md), [Windows Project 2 reproduction guide](ecse6320-project2-memory/docs/reproduction.md), [Mac Project 2 guide](Project2_Mac/README.md), and [Project 3 reproduction guide](ecse6320-project3-ssd/docs/reproduction.md).
