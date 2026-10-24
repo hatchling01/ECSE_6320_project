@@ -4,3 +4,8 @@
 ecse6320-project1-simd/** -whitespace
 ecse6320-project2-memory/** -whitespace
 ecse6320-project3-ssd/** -whitespace
+Project2_Mac/data/** -whitespace
+Project2_Mac/plots/** -whitespace
+Project2_Mac/report/** -whitespace
+Project2_Mac/validation/** -whitespace
+Project2_Mac/scripts/analyze.py -whitespace

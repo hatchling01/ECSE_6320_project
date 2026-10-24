@@ -1,0 +1,6 @@
+Starting recording with the Instruction Processing template. Launching process: bench. Time limit: 10.0 s
+Ctrl-C to stop the recording
+{"mode":"chase","bytes":1048576,"stride":128,"read_percent":100,"workers":0,"operations":318713856,"seconds":2.000023000,"ns_per_op":6.275294,"useful_GB_s":1.274841,"background_GB_s":0.000000,"probe_ns":0.000000,"checksum":737792}
+Target app exited, ending recording...
+Recording completed. Saving output file...
+Output file saved as: pages_compact-2.trace

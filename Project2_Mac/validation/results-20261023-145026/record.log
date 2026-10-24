@@ -1,0 +1,6 @@
+Starting recording with the Memory Counters template. Launching process: memory_probe. Time limit: 10.0 s
+Ctrl-C to stop the recording
+mode=memory bytes=67108864 nodes=524288 stride=128 loads=17825792 seconds=2.005811 ns_per_load=112.523 checksum=3255040
+Target app exited, ending recording...
+Recording completed. Saving output file...
+Output file saved as: memory.trace

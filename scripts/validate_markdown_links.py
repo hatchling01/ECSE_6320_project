@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROJECTS = [
     ROOT / "ecse6320-project1-simd",
     ROOT / "ecse6320-project2-memory",
+    ROOT / "Project2_Mac",
     ROOT / "ecse6320-project3-ssd",
 ]
 
@@ -18,6 +19,10 @@ def documents() -> list[Path]:
         selected += list((p / "results" / "tables").glob("FINAL_TABLES.md"))
         selected += list((p / "docs").glob("reproduction.md"))
         selected += list((p / "docs").glob("final_requirement_audit.md"))
+        selected += list((p / "docs").glob("MAC_VS_WINDOWS_COMPARISON.md"))
+        selected += list((p / "docs").glob("dependency_comparison.md"))
+        selected += list((p / "results" / "comparison").glob("COMPARISON_TABLES.md"))
+    selected += list((ROOT / "Project2_Mac").rglob("*.md"))
     return sorted(set(selected))
 
 def staged_files() -> set[str]:

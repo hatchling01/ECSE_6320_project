@@ -1,0 +1,1 @@
+mode=tlb-local bytes=1048576 nodes=8192 stride=128 loads=328925184 seconds=2.000364 ns_per_load=6.082 checksum=927872

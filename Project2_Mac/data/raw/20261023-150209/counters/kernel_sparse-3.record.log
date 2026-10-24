@@ -1,0 +1,6 @@
+Starting recording with the Instruction Processing template. Launching process: bench. Time limit: 10.0 s
+Ctrl-C to stop the recording
+{"mode":"multiply","bytes":201326592,"stride":128,"read_percent":67,"workers":0,"operations":411566080,"seconds":2.000208000,"ns_per_op":4.859992,"useful_GB_s":4.938279,"background_GB_s":0.000000,"probe_ns":0.000000,"checksum":4194331}
+Target app exited, ending recording...
+Recording completed. Saving output file...
+Output file saved as: kernel_sparse-3.trace

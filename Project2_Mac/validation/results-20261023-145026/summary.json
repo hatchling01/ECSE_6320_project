@@ -1,0 +1,146 @@
+{
+  "native_trials": [
+    {
+      "mode": "cache",
+      "bytes": "32768",
+      "nodes": "256",
+      "stride": "128",
+      "loads": "2202271744",
+      "seconds": "2.000054",
+      "ns_per_load": "0.908",
+      "checksum": "27520",
+      "trial": 1
+    },
+    {
+      "mode": "cache",
+      "bytes": "32768",
+      "nodes": "256",
+      "stride": "128",
+      "loads": "2225405952",
+      "seconds": "2.000047",
+      "ns_per_load": "0.899",
+      "checksum": "27520",
+      "trial": 2
+    },
+    {
+      "mode": "cache",
+      "bytes": "32768",
+      "nodes": "256",
+      "stride": "128",
+      "loads": "2225274880",
+      "seconds": "2.000048",
+      "ns_per_load": "0.899",
+      "checksum": "27520",
+      "trial": 3
+    },
+    {
+      "mode": "memory",
+      "bytes": "67108864",
+      "nodes": "524288",
+      "stride": "128",
+      "loads": "17891328",
+      "seconds": "2.005905",
+      "ns_per_load": "112.116",
+      "checksum": "48278144",
+      "trial": 1
+    },
+    {
+      "mode": "memory",
+      "bytes": "67108864",
+      "nodes": "524288",
+      "stride": "128",
+      "loads": "17891328",
+      "seconds": "2.005630",
+      "ns_per_load": "112.101",
+      "checksum": "48278144",
+      "trial": 2
+    },
+    {
+      "mode": "memory",
+      "bytes": "67108864",
+      "nodes": "524288",
+      "stride": "128",
+      "loads": "17825792",
+      "seconds": "2.001893",
+      "ns_per_load": "112.303",
+      "checksum": "3255040",
+      "trial": 3
+    },
+    {
+      "mode": "tlb-local",
+      "bytes": "1048576",
+      "nodes": "8192",
+      "stride": "128",
+      "loads": "328663040",
+      "seconds": "2.000112",
+      "ns_per_load": "6.086",
+      "checksum": "927872",
+      "trial": 1
+    },
+    {
+      "mode": "tlb-local",
+      "bytes": "1048576",
+      "nodes": "8192",
+      "stride": "128",
+      "loads": "316735488",
+      "seconds": "2.000371",
+      "ns_per_load": "6.316",
+      "checksum": "927872",
+      "trial": 2
+    },
+    {
+      "mode": "tlb-local",
+      "bytes": "1048576",
+      "nodes": "8192",
+      "stride": "128",
+      "loads": "328925184",
+      "seconds": "2.000364",
+      "ns_per_load": "6.082",
+      "checksum": "927872",
+      "trial": 3
+    },
+    {
+      "mode": "tlb-spread",
+      "bytes": "134217728",
+      "nodes": "8192",
+      "stride": "16384",
+      "loads": "43909120",
+      "seconds": "2.000664",
+      "ns_per_load": "45.564",
+      "checksum": "118767616",
+      "trial": 1
+    },
+    {
+      "mode": "tlb-spread",
+      "bytes": "134217728",
+      "nodes": "8192",
+      "stride": "16384",
+      "loads": "43909120",
+      "seconds": "2.002034",
+      "ns_per_load": "45.595",
+      "checksum": "118767616",
+      "trial": 2
+    },
+    {
+      "mode": "tlb-spread",
+      "bytes": "134217728",
+      "nodes": "8192",
+      "stride": "16384",
+      "loads": "43974656",
+      "seconds": "2.000849",
+      "ns_per_load": "45.500",
+      "checksum": "118767616",
+      "trial": 3
+    }
+  ],
+  "miss_counter_validation": "NOT PASSED",
+  "median_ns_per_load": {
+    "cache": 0.899,
+    "memory": 112.116,
+    "tlb-local": 6.086,
+    "tlb-spread": 45.564
+  },
+  "record_exit_status": 0,
+  "export_exit_status": -6,
+  "blocker": "Could not cast value of type 'NSNull' (0x1f47c7050) to 'NSString' (0x1f47b99c8)."
+}

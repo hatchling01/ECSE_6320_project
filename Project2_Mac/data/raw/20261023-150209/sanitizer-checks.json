@@ -1,0 +1,96 @@
+[
+  {
+    "command": [
+      "build/bench-sanitized",
+      "selftest"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"multiply\",\"bytes\":3072,\"stride\":8,\"read_percent\":67,\"workers\":0,\"operations\":6503808,\"seconds\":0.010001000,\"ns_per_op\":1.537715,\"useful_GB_s\":15.607578,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":988}\n{\"selftest\":\"passed\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "chase",
+      "65536",
+      "128",
+      "random",
+      "100",
+      ".01",
+      "42"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"chase\",\"bytes\":65536,\"stride\":128,\"read_percent\":100,\"workers\":0,\"operations\":8101888,\"seconds\":0.010005000,\"ns_per_op\":1.234897,\"useful_GB_s\":6.478271,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":0}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "pages",
+      "1048576",
+      "16384",
+      "random",
+      "100",
+      ".01",
+      "42"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"pages\",\"bytes\":1048576,\"stride\":16384,\"read_percent\":100,\"workers\":0,\"operations\":8007680,\"seconds\":0.010005000,\"ns_per_op\":1.249426,\"useful_GB_s\":6.402943,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":0}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "stream",
+      "65536",
+      "64",
+      "random",
+      "70",
+      ".01",
+      "42"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"stream\",\"bytes\":65536,\"stride\":64,\"read_percent\":70,\"workers\":0,\"operations\":8270848,\"seconds\":0.010000000,\"ns_per_op\":1.209066,\"useful_GB_s\":6.616678,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":23855804585}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "stream",
+      "65536",
+      "8",
+      "sequential",
+      "0",
+      ".01",
+      "42"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"stream\",\"bytes\":65536,\"stride\":8,\"read_percent\":0,\"workers\":0,\"operations\":10756096,\"seconds\":0.010003000,\"ns_per_op\":0.929984,\"useful_GB_s\":8.602296,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":1313}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "loaded",
+      "1",
+      "50",
+      ".01",
+      "42"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"loaded\",\"bytes\":268435456,\"stride\":128,\"read_percent\":50,\"workers\":1,\"operations\":81920,\"seconds\":0.010304000,\"ns_per_op\":125.781250,\"useful_GB_s\":0.063602,\"background_GB_s\":7.111056,\"probe_ns\":125.781250,\"checksum\":261313792}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "build/bench-sanitized",
+      "kernel",
+      "98304",
+      "128",
+      ".01"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"mode\":\"multiply\",\"bytes\":98304,\"stride\":128,\"read_percent\":67,\"workers\":0,\"operations\":9338880,\"seconds\":0.010000000,\"ns_per_op\":1.070792,\"useful_GB_s\":22.413312,\"background_GB_s\":0.000000,\"probe_ns\":0.000000,\"checksum\":2040}\n",
+    "stderr": ""
+  }
+]

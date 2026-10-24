@@ -1,0 +1,95 @@
+category,metric,platform,value,unit,source,comparability,note
+working_set_latency,16384_bytes,Mac,0.961015,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,65536_bytes,Mac,0.968552667,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,131072_bytes,Mac,1.004193,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,262144_bytes,Mac,6.45846367,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,1048576_bytes,Mac,6.51475633,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,4194304_bytes,Mac,7.83623433,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,8388608_bytes,Mac,8.78931,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,16777216_bytes,Mac,19.0753547,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,33554432_bytes,Mac,59.0260097,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,67108864_bytes,Mac,112.137495,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,268435456_bytes,Mac,120.01572,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,536870912_bytes,Mac,121.176624,ns/access,data/processed/summary.csv,MODERATE,128 B node spacing; arithmetic mean of three trials
+working_set_latency,16384_bytes,Windows,1.23468162,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,32768_bytes,Windows,1.23550954,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,49152_bytes,Windows,1.26859381,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,65536_bytes,Windows,2.99290862,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,131072_bytes,Windows,2.99153399,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,262144_bytes,Windows,2.99530208,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,524288_bytes,Windows,3.32990174,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,1048576_bytes,Windows,5.18984207,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,2097152_bytes,Windows,9.22539761,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,4194304_bytes,Windows,10.0695964,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,8388608_bytes,Windows,10.4017031,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,16777216_bytes,Windows,11.6760219,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,33554432_bytes,Windows,66.892828,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,67108864_bytes,Windows,97.2856075,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,134217728_bytes,Windows,102.049541,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,268435456_bytes,Windows,110.063768,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,536870912_bytes,Windows,128.956509,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+working_set_latency,1073741824_bytes,Windows,118.87133,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,MODERATE,64 B node spacing; median of three trials
+access_pattern_normalized,sequential_64B,Mac,1,ratio,derived,LOW,Normalized within platform; useful-byte accounting and footprints differ
+access_pattern_normalized,random_64B,Mac,0.176430218,ratio,derived,LOW,Normalized within platform; useful-byte accounting and footprints differ
+access_pattern_normalized,sequential_64B,Windows,1,ratio,derived,LOW,Normalized within platform; useful-byte accounting and footprints differ
+access_pattern_normalized,random_64B,Windows,0.0903490033,ratio,derived,LOW,Normalized within platform; useful-byte accounting and footprints differ
+stride_normalized,64_bytes,Mac,1,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+stride_normalized,256_bytes,Mac,0.224226219,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+stride_normalized,1024_bytes,Mac,0.201897776,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+stride_normalized,64_bytes,Windows,1,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+stride_normalized,256_bytes,Windows,0.395633196,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+stride_normalized,1024_bytes,Windows,0.35338467,ratio,derived,MODERATE,Normalized to that platform's 64 B sequential read
+read_write_mix_normalized,100_percent_read,Mac,1,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,70_percent_read,Mac,0.2758135,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,50_percent_read,Mac,0.26297916,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,0_percent_read,Mac,1.43069515,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,100_percent_read,Windows,1,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,70_percent_read,Windows,0.891183506,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,50_percent_read,Windows,0.79644315,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+read_write_mix_normalized,0_percent_read,Windows,0.589602433,ratio,derived,LOW,"Different operation size, footprint, compiler paths, and useful-byte accounting"
+loaded_bandwidth_normalized,0_workers,Mac,0,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,0_workers,Mac,1,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,1_workers,Mac,0.415079373,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,1_workers,Mac,1.00211747,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,2_workers,Mac,0.730950209,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,2_workers,Mac,1.06423863,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,4_workers,Mac,1,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,4_workers,Mac,1.19172462,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,7_workers,Mac,0.998734603,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,7_workers,Mac,1.20238738,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,11_workers,Mac,0.999392192,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,11_workers,Mac,1.46792101,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,0_workers,Windows,0,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,0_workers,Windows,1,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,1_workers,Windows,0.105487217,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,1_workers,Windows,1.03464463,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,2_workers,Windows,0.198185929,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,2_workers,Windows,1.06164763,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,4_workers,Windows,0.378944825,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,4_workers,Windows,1.13923008,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,8_workers,Windows,0.659865979,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,8_workers,Windows,1.31351032,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,12_workers,Windows,0.901657047,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,12_workers,Windows,1.45448181,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+loaded_bandwidth_normalized,15_workers,Windows,1,ratio,derived,LOW,"Different worker kernels, core counts, footprints, and byte units"
+loaded_latency_normalized,15_workers,Windows,1.56177474,ratio,derived,LOW,Dependent probe normalized to platform unloaded baseline
+pattern_bandwidth,64B_sequential_read,Mac,13.0939267,GB/s,data/processed/summary.csv,LOW,256 MiB span; 8 useful bytes per operation
+pattern_bandwidth,64B_random_read,Mac,2.31016433,GB/s,data/processed/summary.csv,LOW,256 MiB span; 8 useful bytes per operation
+pattern_bandwidth,64B_sequential_read,Windows,29.2337826,GiB/s,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,1 GiB working set; 64 logical useful bytes per operation
+pattern_bandwidth,64B_random_read,Windows,2.64124312,GiB/s,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,1 GiB working set; 64 logical useful bytes per operation
+page_locality,8192_nodes_spread,Mac,16.1622857,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,64_nodes_spread,Mac,0.955418,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,256_nodes_spread,Mac,4.31554733,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,1024_nodes_compact,Mac,1.010874,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,4096_nodes_spread,Mac,15.8344077,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,1024_nodes_spread,Mac,4.37457667,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,8192_nodes_compact,Mac,6.538347,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,4096_nodes_compact,Mac,6.52499167,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,256_nodes_compact,Mac,0.966037667,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,64_nodes_compact,Mac,0.965852,ns/access,data/processed/summary.csv,LOW,16 KiB native pages; cache effects not isolated; no validated TLB counts
+page_locality,16_pages,Windows,3.05653945,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page
+page_locality,64_pages,Windows,3.00167016,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page
+page_locality,256_pages,Windows,4.22229113,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page
+page_locality,1024_pages,Windows,6.01192698,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page
+page_locality,4096_pages,Windows,10.913749,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page
+page_locality,16384_pages,Windows,18.2568425,ns/load,../ecse6320-project2-memory/data/parsed/summary.csv,LOW,4 KiB pages; one node per page

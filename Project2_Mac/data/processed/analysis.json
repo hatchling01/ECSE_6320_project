@@ -1,0 +1,13 @@
+{
+  "source_run": "20261023-150209",
+  "measurements": 186,
+  "profiles": 18,
+  "saturation_candidate_workers": 4,
+  "post_candidate_latency_rise": true,
+  "little_law_illustrative_bytes": 33797.96225689438,
+  "counter_scope": "L1D-related stall metrics only; no raw data-TLB misses",
+  "huge_page_status": "Not measured: explicit 2 MiB allocation rejected with KERN_INVALID_ARGUMENT; native pages are 16 KiB. No supported alternative was established.",
+  "tlb_count_status": "Event definitions exist and custom recording completed, but export aborted with an NSNull/NSString cast error. Individual data-TLB counts were not extracted or validated; this does not show hardware counters are absent.",
+  "follow_up_estimates": "Planning only: 10\u201320 minutes for a comparison on already-configured Linux with verified huge pages; no reliable Mac huge-page estimate; 15\u201330 minutes to investigate alternative TLB collection, without guaranteed success.",
+  "grading_risk": "Huge pages are conditional on availability; missing direct TLB-counter evidence weakens the 35-point working-set/cache/TLB category. Exact deductions are unspecified."
+}

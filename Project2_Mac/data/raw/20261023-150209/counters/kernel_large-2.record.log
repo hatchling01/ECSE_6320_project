@@ -1,0 +1,6 @@
+Starting recording with the Instruction Processing template. Launching process: bench. Time limit: 10.0 s
+Ctrl-C to stop the recording
+{"mode":"multiply","bytes":201326592,"stride":8,"read_percent":67,"workers":0,"operations":7700742144,"seconds":2.001041000,"ns_per_op":0.259850,"useful_GB_s":92.360832,"background_GB_s":0.000000,"probe_ns":0.000000,"checksum":67108828}
+Target app exited, ending recording...
+Recording completed. Saving output file...
+Output file saved as: kernel_large-2.trace

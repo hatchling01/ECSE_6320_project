@@ -1,0 +1,6 @@
+.venv/
+build/
+__pycache__/
+*.trace/
+validation/memory_probe
+*.tracetemplate

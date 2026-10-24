@@ -1,0 +1,1 @@
+mode=cache bytes=32768 nodes=256 stride=128 loads=2225405952 seconds=2.000047 ns_per_load=0.899 checksum=27520

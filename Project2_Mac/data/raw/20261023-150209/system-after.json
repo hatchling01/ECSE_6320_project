@@ -1,0 +1,93 @@
+[
+  {
+    "command": [
+      "sysctl",
+      "hw.model",
+      "machdep.cpu.brand_string",
+      "hw.memsize",
+      "hw.pagesize",
+      "hw.cachelinesize",
+      "hw.physicalcpu",
+      "hw.logicalcpu",
+      "hw.perflevel0",
+      "hw.perflevel1",
+      "vm.swapusage"
+    ],
+    "exit_status": 0,
+    "stdout": "hw.model: Mac16,8\nmachdep.cpu.brand_string: Apple M4 Pro\nhw.memsize: 25769803776\nhw.pagesize: 16384\nhw.cachelinesize: 128\nhw.physicalcpu: 12\nhw.logicalcpu: 12\nhw.perflevel0.physicalcpu: 8\nhw.perflevel0.physicalcpu_max: 8\nhw.perflevel0.logicalcpu: 8\nhw.perflevel0.logicalcpu_max: 8\nhw.perflevel0.l1icachesize: 196608\nhw.perflevel0.l1dcachesize: 131072\nhw.perflevel0.l2cachesize: 16777216\nhw.perflevel0.cpusperl2: 4\nhw.perflevel0.name: Performance\nhw.perflevel1.physicalcpu: 4\nhw.perflevel1.physicalcpu_max: 4\nhw.perflevel1.logicalcpu: 4\nhw.perflevel1.logicalcpu_max: 4\nhw.perflevel1.l1icachesize: 131072\nhw.perflevel1.l1dcachesize: 65536\nhw.perflevel1.l2cachesize: 4194304\nhw.perflevel1.cpusperl2: 4\nhw.perflevel1.name: Efficiency\nvm.swapusage: total = 0.00M  used = 0.00M  free = 0.00M  (encrypted)\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "sw_vers"
+    ],
+    "exit_status": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uname",
+      "-srm"
+    ],
+    "exit_status": 0,
+    "stdout": "Darwin 25.6.0 arm64\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "clang",
+      "--version"
+    ],
+    "exit_status": 0,
+    "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "pmset",
+      "-g",
+      "custom"
+    ],
+    "exit_status": 0,
+    "stdout": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "pmset",
+      "-g",
+      "batt"
+    ],
+    "exit_status": 0,
+    "stdout": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=23199843)\t50%; discharging; 7:23 remaining present: true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "pmset",
+      "-g",
+      "therm"
+    ],
+    "exit_status": 0,
+    "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "vm_stat"
+    ],
+    "exit_status": 0,
+    "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   111844.\nPages active:                                 404407.\nPages inactive:                               411763.\nPages speculative:                              2215.\nPages throttled:                                   0.\nPages wired down:                             157204.\nPages purgeable:                                2016.\n\"Translation faults\":                      240659657.\nPages copy-on-write:                        13212477.\nPages zero filled:                         362330667.\nPages reactivated:                          10866753.\nPages purged:                                1681541.\nFile-backed pages:                            320446.\nAnonymous pages:                              497939.\nPages stored in compressor:                   894547.\nPages occupied by compressor:                 442858.\nDecompressions:                              5649761.\nCompressions:                                8580675.\nPageins:                                    11828489.\nPageouts:                                     147475.\nSwapins:                                           0.\nSwapouts:                                          0.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xcode-select",
+      "-p"
+    ],
+    "exit_status": 0,
+    "stdout": "/Library/Developer/CommandLineTools\n",
+    "stderr": ""
+  }
+]

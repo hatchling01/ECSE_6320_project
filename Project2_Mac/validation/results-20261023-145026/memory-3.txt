@@ -1,0 +1,1 @@
+mode=memory bytes=67108864 nodes=524288 stride=128 loads=17825792 seconds=2.001893 ns_per_load=112.303 checksum=3255040

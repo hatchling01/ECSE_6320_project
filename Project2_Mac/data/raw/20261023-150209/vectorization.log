@@ -1,0 +1,124 @@
+clang -O3 -g -std=c11 -Wall -Wextra -Werror -pthread -Rpass=loop-vectorize -Rpass-missed=loop-vectorize -c src/bench.c -o build/vectorization-check.o
+src/bench.c:294:9: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  294 |         for (size_t i = 0; i < bytes / 8; i++) p[i] = i + 1;
+      |         ^
+src/bench.c:297:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  297 |         do {
+      |         ^
+src/bench.c:99:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   99 |     for (size_t i = 0; i < count; i++) offset = *(size_t *)(p + offset);
+      |     ^
+src/bench.c:99:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+src/bench.c:114:13: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+  114 |             for (size_t k = r; k < 10; k++) p[(order ? order[i + k] : i + k) * step] = salt;
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  113 |             for (size_t k = 0; k < r; k++) sum += p[(order ? order[i + k] : i + k) * step];
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:114:13: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+  114 |             for (size_t k = r; k < 10; k++) p[(order ? order[i + k] : i + k) * step] = salt;
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  113 |             for (size_t k = 0; k < r; k++) sum += p[(order ? order[i + k] : i + k) * step];
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:114:13: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+  114 |             for (size_t k = r; k < 10; k++) p[(order ? order[i + k] : i + k) * step] = salt;
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  113 |             for (size_t k = 0; k < r; k++) sum += p[(order ? order[i + k] : i + k) * step];
+      |             ^
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:113:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:234:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  234 |             for (size_t i = 0; i < 37; i++) {
+      |             ^
+src/bench.c:69:15: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   69 |     if (seed) for (size_t i = n - 1; i; i--) {
+      |               ^
+src/bench.c:99:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   99 |     for (size_t i = 0; i < count; i++) offset = *(size_t *)(p + offset);
+      |     ^
+src/bench.c:173:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  173 |     for (int i = 0; i < count; i++) {
+      |     ^
+src/bench.c:179:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  179 |     while (shared.ready != count) check_thread(pthread_cond_wait(&shared.cond, &shared.mutex));
+      |     ^
+src/bench.c:99:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   99 |     for (size_t i = 0; i < count; i++) offset = *(size_t *)(p + offset);
+      |     ^
+src/bench.c:189:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  189 |     for (int i = 0; i < count; i++) {
+      |     ^
+src/bench.c:209:5: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  209 |     for (size_t i = 0; i < n; i++) { x[i] = (double)(i % 17); y[i] = 0.5; }
+      |     ^
+src/bench.c:209:5: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:210:5: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  210 |     for (size_t i = 0; i < n; i += step) z[i] = x[i] * y[i];
+      |     ^
+src/bench.c:210:5: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:214:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  214 |         for (size_t i = 0; i < n; i += step) z[i] = x[i] * y[i];
+      |         ^
+src/bench.c:214:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:220:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  220 |     for (size_t i = 0; i < n; i += step) { assert(z[i] == (double)(i % 17) * 0.5); checksum += (uint64_t)(z[i] * 2); }
+      |     ^
+src/bench.c:85:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   85 |     for (size_t i = 0; i < n; i++)
+      |     ^
+src/bench.c:85:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+src/bench.c:88:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   88 |     for (size_t i = 0; i < n; i++) {
+      |     ^
+src/bench.c:68:5: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+   68 |     for (size_t i = 0; i < n; i++) p[i] = i;
+      |     ^
+src/bench.c:69:15: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   69 |     if (seed) for (size_t i = n - 1; i; i--) {
+      |               ^
+src/bench.c:108:9: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+  108 |         for (size_t i = 0; i < count; i++) p[(order ? order[i] : i) * step] = salt;
+      |         ^
+src/bench.c:108:9: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+src/bench.c:106:9: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+  106 |         for (size_t i = 0; i < count; i++) sum += p[(order ? order[i] : i) * step];
+      |         ^
+src/bench.c:106:9: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+src/bench.c:114:13: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  114 |             for (size_t k = r; k < 10; k++) p[(order ? order[i + k] : i + k) * step] = salt;
+      |             ^
+src/bench.c:114:13: remark: interleaved loop (interleaved count: 4) [-Rpass=loop-vectorize]
+src/bench.c:113:13: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  113 |             for (size_t k = 0; k < r; k++) sum += p[(order ? order[i + k] : i + k) * step];
+      |             ^
+src/bench.c:113:13: remark: interleaved loop (interleaved count: 2) [-Rpass=loop-vectorize]
+src/bench.c:116:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  116 |         for (; i < count; i++) {
+      |         ^
+src/bench.c:116:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:116:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+src/bench.c:151:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  151 |     while (!s->start) check_thread(pthread_cond_wait(&s->cond, &s->mutex));
+      |     ^
+src/bench.c:114:13: remark: vectorized loop (vectorization width: 2, interleaved count: 1) [-Rpass=loop-vectorize]
+  114 |             for (size_t k = r; k < 10; k++) p[(order ? order[i + k] : i + k) * step] = salt;
+      |             ^
+src/bench.c:114:13: remark: vectorized loop (vectorization width: 2, interleaved count: 1) [-Rpass=loop-vectorize]
+src/bench.c:113:13: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  113 |             for (size_t k = 0; k < r; k++) sum += p[(order ? order[i + k] : i + k) * step];
+      |             ^
+src/bench.c:106:9: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  106 |         for (size_t i = 0; i < count; i++) sum += p[(order ? order[i] : i) * step];
+      |         ^
+src/bench.c:108:9: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  108 |         for (size_t i = 0; i < count; i++) p[(order ? order[i] : i) * step] = salt;
+      |         ^

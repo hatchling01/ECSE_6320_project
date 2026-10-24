@@ -1,0 +1,29 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "--version"
+    ],
+    "stdout": "Python 3.13.15\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "stdout": "contourpy==1.4.0\ncycler==0.12.1\nfonttools==4.67.0\nkiwisolver==1.5.1\nmatplotlib==3.10.8\nnumpy==2.5.4\npackaging==26.3\npillow==13.0.0\npyparsing==3.3.3\npython-dateutil==3.0.0\nsix==1.17.0\ntzdata==2026.5\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "xcrun",
+      "xcodebuild",
+      "-version"
+    ],
+    "stdout": "Xcode 26.0.1\nBuild version 17A400\n",
+    "stderr": ""
+  }
+]
