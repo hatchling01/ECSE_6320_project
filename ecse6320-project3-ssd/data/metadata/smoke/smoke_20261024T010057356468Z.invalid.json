@@ -1,0 +1,10 @@
+{
+  "classification": "NOT FOR PERFORMANCE ANALYSIS",
+  "status": "INVALIDATED",
+  "reason": "A drive-qualified --filename value was split by FIO at the Windows drive-letter colon and created an unintended repository-root file named C.",
+  "raw_json": "data/raw/smoke/smoke_20261024T010057356468Z.json",
+  "parsed_csv": "data/parsed/smoke/smoke_20261024T010057356468Z.csv",
+  "original_metadata": "data/metadata/smoke/smoke_20261024T010057356468Z.json",
+  "log": "logs/smoke/smoke_20261024T010057356468Z.log",
+  "disposition": "Retained solely as audit evidence; never use or merge into performance analysis."
+}

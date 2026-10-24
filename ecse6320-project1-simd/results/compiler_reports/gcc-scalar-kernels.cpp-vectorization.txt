@@ -1,0 +1,5 @@
+GCC 16.2.0 scalar-control build.
+Flags: -O3 -DNDEBUG -fno-tree-vectorize -fno-tree-loop-vectorize -fno-tree-slp-vectorize -fopt-info-vec-all.
+No kernel-loop vectorization records were emitted for src/kernels.cpp.
+The targeted object disassembly contains scalar SSE scalar-form instructions (for example MULSS/ADDSS and MULSD/ADDSD), but no packed arithmetic or FMA instructions for the project kernels.
+See gcc-scalar-compile.log and ../disassembly/gcc-scalar-kernels.asm.

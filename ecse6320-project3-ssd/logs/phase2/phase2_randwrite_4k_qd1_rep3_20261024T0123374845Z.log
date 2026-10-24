@@ -1,0 +1,22 @@
+SAFE REGULAR-FILE TARGET VERIFIED
+classification=PRODUCTION
+run_id=phase2_randwrite_4k_qd1_rep3_20261024T0123374845Z
+resolved_target=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\benchmark_data\fio_production.bin
+file_range_bytes=8589934592
+fio_executable=C:\Program Files\fio\fio.exe
+engine=windowsaio
+direct=1
+workload=randwrite
+block_size=4k
+iodepth=1
+numjobs=1
+working_directory=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\benchmark_data
+filename_argument=fio_production.bin
+free_bytes_before=598061305856
+logical_writes_before=19327352832
+projected_max_write_bytes=1073741824
+command="C:\Program Files\fio\fio.exe" --name=randwrite_4k_qd1 --output=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\data\raw\phase2\phase2_randwrite_4k_qd1_rep3_20261024T0123374845Z.json --output-format=json --filename=fio_production.bin --ioengine=windowsaio --direct=1 --thread=1 --group_reporting=1 --rw=randwrite --bs=4k --iodepth=1 --numjobs=1 --size=8589934592 --percentile_list=50:95:99:99.9 --randrepeat=1 --refill_buffers=1 --buffer_compress_percentage=0 --time_based=0 --io_size=1073741824
+ACTUAL JSON TARGET VALIDATED
+logical_bytes_written=1073741824
+cumulative_logical_bytes_written=20401094656
+RUN VALIDATED

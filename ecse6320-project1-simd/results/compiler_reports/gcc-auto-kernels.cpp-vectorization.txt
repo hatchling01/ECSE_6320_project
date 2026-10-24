@@ -1,0 +1,80 @@
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:8:31: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:8:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:8:31: optimized: epilogue loop vectorized using 8 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** Analysis failed with vector mode V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:8:31: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:8:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:67:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:69:1: note: ***** Analysis failed with vector mode V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:69:1: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:16:31: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:72:3: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:73:36: note: ***** Analysis failed with vector mode V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:73:36: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:16:31: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:72:3: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:73:36: note: ***** Analysis failed with vector mode V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:73:36: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:24:31: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:24:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:24:31: optimized: epilogue loop vectorized using 8 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:24:31: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:24:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:77:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: optimized: epilogue loop vectorized using 8 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: missed: couldn't vectorize loop
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:39:28: missed: not vectorized: no vectype for stmt: _13 = *_12;
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:38:31: missed: couldn't vectorize loop
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:39:28: missed: not vectorized: no vectype for stmt: _13 = *_12;
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:82:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:59:35: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:59:35: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:59:35: optimized: epilogue loop vectorized using 8 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** Analysis failed with vector mode V4SF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** The result for vector mode V16QI would be the same
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** Re-trying analysis with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** Analysis failed with vector mode V8QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** Re-trying analysis with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: ***** Analysis failed with vector mode V4QI
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:59:35: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:59:35: optimized:  loop versioned for vectorization because of possible aliasing
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:94:6: note: vectorized 1 loops in function.
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:102:1: note: ***** Analysis failed with vector mode V2DF
+C:/Users/CHOUDN3/Downloads/EcSE_4320/ecse6320-project1-simd/src/kernels.cpp:102:1: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF

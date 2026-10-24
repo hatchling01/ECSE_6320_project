@@ -1,0 +1,97 @@
+{
+  "captured_at": "2026-10-23",
+  "capture_type": "Phase 0 environment inventory; not benchmark data",
+  "host": {
+    "os": "Microsoft Windows 11 Enterprise",
+    "version": "10.0.26200",
+    "build": 26200,
+    "architecture": "64-bit",
+    "execution_target": "native Windows/bare-metal",
+    "cpu_name_windows_cim": "AMD Ryzen 9 9950X 16-Core Processor",
+    "cpu_manufacturer": "AuthenticAMD",
+    "physical_cores": 16,
+    "logical_processors": 32,
+    "max_clock_mhz_reported_by_windows": 4300,
+    "memory_bytes": 66199183360
+  },
+  "uprof_cpu_info": {
+    "processor_name": "AMD Ryzen 9 9950X 16-Core Processor",
+    "family_hex": "0x1a",
+    "model_hex": "0x44",
+    "ccx_count": 2,
+    "supported_profile_types": [
+      "core"
+    ],
+    "available_pmcs": {
+      "core": 6,
+      "l3": 0,
+      "df": 0,
+      "umc": 0
+    },
+    "zen_generation_named_by_uprof": null,
+    "limitation": "No direct L3/DF/UMC PMCs or memory-controller bandwidth counters reported."
+  },
+  "tools": {
+    "git": {
+      "version": "2.54.0.windows.1",
+      "path": "C:\\Program Files\\Git\\cmd\\git.exe"
+    },
+    "conda": {
+      "version": "25.11.0",
+      "root": "C:\\Users\\CHOUDN3\\AppData\\Local\\anaconda3"
+    },
+    "python": {
+      "version": "3.13.9",
+      "path": "C:\\Users\\CHOUDN3\\AppData\\Local\\anaconda3\\python.exe",
+      "primary_distribution": "Anaconda"
+    },
+    "cmake": {
+      "version": "4.4.4",
+      "path": "C:\\Users\\CHOUDN3\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Kitware.CMake_Microsoft.Winget.Source_8wekyb3d8bbwe\\cmake-4.4.4-windows-x86_64\\bin\\cmake.exe"
+    },
+    "clang": {
+      "version": "23.1.4",
+      "path": "C:\\Program Files\\LLVM\\bin\\clang.exe"
+    },
+    "clang++": {
+      "version": "23.1.4",
+      "path": "C:\\Program Files\\LLVM\\bin\\clang++.exe"
+    },
+    "msys2": {
+      "version": "20260611",
+      "root": "C:\\msys64",
+      "environment": "UCRT64"
+    },
+    "gcc": {
+      "version": "16.2.0",
+      "path": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+    },
+    "g++": {
+      "version": "16.2.0",
+      "path": "C:\\msys64\\ucrt64\\bin\\g++.exe"
+    },
+    "make": {
+      "version": "4.4.1",
+      "path": "C:\\msys64\\ucrt64\\bin\\mingw32-make.exe"
+    },
+    "ninja": {
+      "version": "1.13.2",
+      "path": "C:\\msys64\\ucrt64\\bin\\ninja.exe"
+    },
+    "objdump": {
+      "version": "2.47.20260726",
+      "path": "C:\\msys64\\ucrt64\\bin\\objdump.exe"
+    },
+    "amd_uprof": {
+      "version": "5.3.521",
+      "cli_version": "5.3.521.0",
+      "install_root": "C:\\Program Files\\AMD\\AMDuProf",
+      "cli_path": "C:\\Program Files\\AMD\\AMDuProf\\bin\\AMDuProfCLI.exe",
+      "pcm_path": "C:\\Program Files\\AMD\\AMDuProf\\bin\\AMDuProfPcm.exe",
+      "sys_path": "C:\\Program Files\\AMD\\AMDuProf\\bin\\AMDPerf\\AMDuProfSys.exe"
+    }
+  },
+  "benchmarks_executed": false,
+  "performance_results_collected": false,
+  "machine_settings_modified": false
+}

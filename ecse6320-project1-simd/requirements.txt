@@ -1,0 +1,4 @@
+# Planned analysis dependencies; not installed or pinned during Phase 0.
+numpy
+pandas
+matplotlib

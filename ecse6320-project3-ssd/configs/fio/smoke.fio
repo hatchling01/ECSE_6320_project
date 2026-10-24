@@ -1,0 +1,22 @@
+; Tiny functionality validation only.
+; NOT FOR PERFORMANCE ANALYSIS.
+[global]
+ioengine=windowsaio
+direct=1
+thread=1
+group_reporting=1
+time_based=0
+randrepeat=1
+refill_buffers=1
+buffer_compress_percentage=0
+percentile_list=50:95:99:99.9
+iodepth=1
+numjobs=1
+bs=4k
+rw=randrw
+rwmixread=50
+size=16m
+io_size=4m
+
+[smoke_validation]
+

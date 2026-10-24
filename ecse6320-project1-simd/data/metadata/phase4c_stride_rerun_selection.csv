@@ -1,0 +1,14 @@
+build,span_name,span_elements,allocated_total_bytes,stride,useful_n,initial_cv,selection_reason
+gcc-auto,intermediate_cache_scale,2097152,25165824,1,2097152,0.4467186082472771,initial_cv_gt_20_percent
+gcc-auto,intermediate_cache_scale,2097152,25165824,2,1048576,0.5626346408978791,initial_cv_gt_20_percent
+gcc-auto,intermediate_cache_scale,2097152,25165824,4,524288,0.3436213053954253,initial_cv_gt_20_percent
+gcc-auto,large_dram_sensitive,11184808,134217696,1,11184808,0.24581008108803448,initial_cv_gt_20_percent
+gcc-auto,large_dram_sensitive,11184808,134217696,8,1398101,0.29848472007472454,initial_cv_gt_20_percent
+gcc-native,intermediate_cache_scale,2097152,25165824,4,524288,0.36784584969235995,initial_cv_gt_20_percent
+gcc-native,intermediate_cache_scale,2097152,25165824,8,262144,0.3689341898029756,initial_cv_gt_20_percent
+gcc-scalar,intermediate_cache_scale,2097152,25165824,1,2097152,0.4216601650248177,initial_cv_gt_20_percent
+gcc-scalar,intermediate_cache_scale,2097152,25165824,2,1048576,0.3071191736275172,initial_cv_gt_20_percent
+gcc-scalar,large_dram_sensitive,11184808,134217696,1,11184808,0.23117167904405433,initial_cv_gt_20_percent
+gcc-scalar,large_dram_sensitive,11184808,134217696,2,5592404,0.3244334698537343,initial_cv_gt_20_percent
+gcc-scalar,large_dram_sensitive,11184808,134217696,4,2796202,0.26655157566974214,initial_cv_gt_20_percent
+gcc-scalar,large_dram_sensitive,11184808,134217696,8,1398101,0.22277893977507274,initial_cv_gt_20_percent

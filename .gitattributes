@@ -1,0 +1,6 @@
+# Imported committed artifacts include generated disassembly/profiler output with
+# intentional historical whitespace. Preserve those bytes unchanged; apply the
+# normal whitespace gate to new monorepo-root files.
+ecse6320-project1-simd/** -whitespace
+ecse6320-project2-memory/** -whitespace
+ecse6320-project3-ssd/** -whitespace

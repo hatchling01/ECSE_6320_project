@@ -1,0 +1,90 @@
+
+"AMD uProf (Version:5.3.521.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\build-gcc-scalar\benchmark_runner.exe"
+Command Line Arguments:,"--kernel elementwise_multiply --datatype float32 --build gcc-scalar --compiler g++.exe (Rev6, Built by MSYS2 project) 16.2.0 --flags -O3 -DNDEBUG -fno-tree-vectorize -fno-tree-loop-vectorize -fno-tree-slp-vectorize --n 2048 --target-working-set-bytes 24576 --warmups 3 --repetitions 1000 --batch 128 --output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\small_cache_resident_gcc-scalar\profiler_instrumented_timing.csv "
+Working Directory:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd"
+Environment Variables:
+CPU Details:,"Family(0x1a), Model(0x44), Number of Cores(32)"
+Operating System:,"Win1125H2-64"
+Profile Command:,"AMDuProfCLI.exe profile --event event=CYCLES_NOT_IN_HALT,interval=250000 --event event=RETIRED_INST,interval=250000 --event event=SCALAR_UOPS_RETIRED,interval=250000 --event event=L1_DC_ACCESSES_ALL,interval=250000 --event event=L2_CACHE_ACCESS_FROM_L1_DC_MISS,interval=250000 --event event=L1_DTLB_MISSES,interval=250000 --affinity 0 --output-dir C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\small_cache_resident_gcc-scalar --show-event-count --stdout --report-output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\small_cache_resident_gcc-scalar\uprof_report.csv --working-dir C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\build-gcc-scalar\benchmark_runner.exe --kernel elementwise_multiply --datatype float32 --build gcc-scalar --compiler g++.exe (Rev6, Built by MSYS2 project) 16.2.0 --flags -O3 -DNDEBUG -fno-tree-vectorize -fno-tree-loop-vectorize -fno-tree-slp-vectorize --n 2048 --target-working-set-bytes 24576 --warmups 3 --repetitions 1000 --batch 128 --output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\small_cache_resident_gcc-scalar\profiler_instrumented_timing.csv"
+
+PROFILE DETAILS
+Profile Session Type:,"Custom Profile"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-31"
+CPU Affinity Mask:,"0"
+Profile Start Time:,"Fri Oct 23 18:13:12 2026"
+Profile End Time:,"Fri Oct 23 18:13:12 2026"
+Profile Duration:,"0.561 seconds"
+Data Folder:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\small_cache_resident_gcc-scalar\AMDuProf-benchmark_runner-Custom_Oct-23-2026_18-13-11"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Microsoft Hyper-V"
+Call Stack Sampling:,"False"
+Selected View:,"All Events"
+
+MONITORED EVENTS
+PMC Events:,Name,Interval,Unitmask,Countmask,Invert Countmask,User,OS,Description
+,"CYCLES_NOT_IN_HALT (PMCx076)",250000,0x00,0x00,False,True,True,"The number of cpu cycles when the thread is not in halt state."
+,"RETIRED_INST (PMCx0C0)",250000,0x00,0x00,False,True,True,"The number of instructions retired from execution. This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction."
+,"SCALAR_UOPS_RETIRED (PMCx008)",250000,0x04,0x00,False,True,True,"Number of scalar floating point micro-ops retired."
+,"L1_DC_ACCESSES_ALL (PMCx029)",250000,0x07,0x00,False,True,True,"The number of load and store ops dispatched to LS unit. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address."
+,"L2_CACHE_ACCESS_FROM_L1_DC_MISS (PMCx060)",250000,0xE0,0x00,False,True,True,"The L2 cache access requests due to L1 data cache misses. This also counts hardware and software prefetches"
+,"L1_DTLB_MISSES (PMCx045)",250000,0xFF,0x00,False,True,True,"The L1 Data Translation Lookaside Buffer (DTLB) Misses from load store micro-ops. This event counts both L2-DTLB hit and L2-DTLB Miss."
+
+
+DERIVED METRICS
+Metric Name,Expression,Description
+"IPC","RETIRED_INST / CYCLES_NOT_IN_HALT","The average number of retired instructions per CPU Cycle. The lower IPC value means the application consumes more cycles due to  cache misses, branch mispredictions, pipeline stalls, I/O or any other performance bottlenecks."
+"CPI","CYCLES_NOT_IN_HALT / RETIRED_INST","The average number of CPU cycles consumed to retire an instruction. This metric is computed as the ratio of CYCLES_NOT_IN_HALT to RETIRED_INST event. The higher values means the application consumes more CPU cycles to retire an instruction due to high cache misses, branch mispredictions, pipeline stalls, I/O or any other bottlenecks. If the CPI values exceeds a threshold value, it will be highlighted in pink."
+"L1_DC_ACCESSES (PTI)","( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST","The number of load and store operations per thousand instructions. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address"
+"L1_DC_MISSES (PTI)","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST","The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+"%L1_DC_MISSES","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 100 ) / L1_DC_ACCESSES_ALL","The percentage of L2 cache access requests due to L1 data cache misses with respect to the total number of load and store operations. This also counts the hardware and software prefetches."
+"L1_DC_ACCESS_RATE","L1_DC_ACCESSES_ALL / RETIRED_INST","The L1 Data Cache access rate is the number of L1 Data Cache accesses divided by the total number of retired instructions."
+"L1_DC_MISS_RATE","L2_CACHE_ACCESS_FROM_L1_DC_MISS / RETIRED_INST","The L1 Data Cache miss rate is the number of L1 Data Cache misses divided by the total number of retired instructions."
+"L1_DC_MISS_RATIO","L2_CACHE_ACCESS_FROM_L1_DC_MISS / L1_DC_ACCESSES_ALL","The L1 Data Cache miss ratio is the number of L1 Data Cache misses divided by the total number of L1 Data Cache accesses."
+"L1_DTLB_HITS (PTI)","((L1_DC_ACCESSES_ALL - L1_DTLB_MISSES) * 1000) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) Hits from load-store micro-ops."
+"L1_DTLB_HIT_RATE","(L1_DC_ACCESSES_ALL - L1_DTLB_MISSES) / RETIRED_INST","The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+"L1_DTLB_MISSES (PTI)","( L1_DTLB_MISSES * 1000 ) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) misses from load-store micro-ops."
+"L1_DTLB_MISS_RATE","L1_DTLB_MISSES / RETIRED_INST","The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+"L1_DTLB_REQUESTS (PTI)","( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) requests from load-store micro-ops."
+"L1_DTLB_REQUEST_RATE","L1_DC_ACCESSES_ALL / RETIRED_INST","The DTLB request rate is the number of DC accesses divided by the total number of retired instructions."
+"L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST","The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Thread Count,"3"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CYCLES_NOT_IN_HALT)"
+FUNCTION,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","SCALAR_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)",Module
+"ntdll.dll!0x180046519",750000.000000,500000.000000,0.6667,1.5000,1000.0000,500.0000,500000.000000,250000.000000,50.0000,0.000000,0.000000,1.0000,0.5000,0.5000,1000.0000,1.0000,0.0000,0.0000,1000.0000,1.0000,500.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x18004650a",750000.000000,250000.000000,0.3333,3.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x180046564",750000.000000,250000.000000,0.3333,3.0000,1000.0000,0.0000,250000.000000,0.000000,0.0000,0.000000,0.000000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x18004652b",500000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x180047396",500000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x180046561",500000.000000,500000.000000,1.0000,1.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"kernelbase.dll!0x18005c6b0",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\kernelbase.dll"
+"kernelbase.dll!0x1800bd293",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\kernelbase.dll"
+"ntdll.dll!0x180045a4e",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+"ntdll.dll!0x180027295",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"c:\windows\system32\ntdll.dll"
+
+"10 HOTTEST PROCESSES (Sort Event - CYCLES_NOT_IN_HALT)"
+PROCESS,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","SCALAR_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)"
+"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-scalar\benchmark_runner.exe (PID:72952)",9250000.000000,8500000.000000,0.9189,1.0882,558.8235,29.4118,4750000.000000,250000.000000,5.2632,0.000000,0.000000,0.5588,0.0294,0.0526,558.8235,0.5588,0.0000,0.0000,558.8235,0.5588,29.4118
+
+"10 HOTTEST MODULES (Sort Event - CYCLES_NOT_IN_HALT)"
+MODULE,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","SCALAR_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)"
+"c:\windows\system32\ntdll.dll",7750000.000000,7500000.000000,0.9677,1.0333,633.3333,33.3333,4750000.000000,250000.000000,5.2632,0.000000,0.000000,0.6333,0.0333,0.0526,633.3333,0.6333,0.0000,0.0000,633.3333,0.6333,33.3333
+"c:\windows\system32\kernelbase.dll",500000.000000,500000.000000,1.0000,1.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\windows\system32\rpcrt4.dll",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\windows\system32\msvcrt.dll",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\windows\system32\ucrtbase.dll",250000.000000,250000.000000,1.0000,1.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\msys64\ucrt64\bin\libstdc++-6.dll",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\windows\system32\sechost.dll",0.000000,250000.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+
+"10 HOTTEST THREADS (Sort Event - CYCLES_NOT_IN_HALT)"
+THREAD,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","SCALAR_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)",THREAD ID
+"Thread-46224 (PID:72952)",9250000.000000,8500000.000000,0.9189,1.0882,558.8235,29.4118,4750000.000000,250000.000000,5.2632,0.000000,0.000000,0.5588,0.0294,0.0526,558.8235,0.5588,0.0000,0.0000,558.8235,0.5588,29.4118,"46224"

@@ -1,0 +1,22 @@
+# Disposable benchmark targets: never commit storage payloads.
+benchmark_data/*
+!benchmark_data/.gitkeep
+
+# Python caches and local environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local/editor noise.
+.vscode/
+.idea/
+*.tmp
+*.log.tmp
+
+# Generated noncanonical outputs may be recreated.
+results/plots/*
+!results/plots/.gitkeep
+results/tables/*
+!results/tables/.gitkeep
+

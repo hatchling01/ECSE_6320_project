@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+**/build/
+**/build-*/
+**/.cache/
+
+# Project-specific generated/working data
+**/benchmark_data/*.bin
+**/data/raw/production/
+**/logs/*.tmp

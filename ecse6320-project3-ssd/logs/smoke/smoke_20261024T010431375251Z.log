@@ -1,0 +1,18 @@
+SAFE REGULAR-FILE TARGET VERIFIED
+classification=NOT FOR PERFORMANCE ANALYSIS
+resolved_path=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\benchmark_data\fio_smoke_test.bin
+file_size_bytes=16777216
+io_range_bytes=16777216
+total_io_bytes=4194304
+fio_executable=C:\Program Files\fio\fio.exe
+engine=windowsaio
+direct=1
+workload=randrw (50/50 read/write)
+block_size_bytes=4096
+iodepth=1
+numjobs=1
+command="C:\Program Files\fio\fio.exe" --output=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\data\raw\smoke\smoke_20261024T010431375251Z.json --output-format=json --filename=fio_smoke_test.bin C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\configs\fio\smoke.fio
+JSON/PERCENTILE VALIDATION PASSED
+PARSER VALIDATION PASSED
+raw_json=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\data\raw\smoke\smoke_20261024T010431375251Z.json
+parsed_csv=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\data\parsed\smoke\smoke_20261024T010431375251Z.csv

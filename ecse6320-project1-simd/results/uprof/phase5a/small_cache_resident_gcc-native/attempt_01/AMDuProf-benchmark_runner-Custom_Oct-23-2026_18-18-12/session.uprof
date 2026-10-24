@@ -1,0 +1,928 @@
+{
+    "auxiliary": {
+        "availablePages": "37868 MB",
+        "availableRam": "19348 MB",
+        "availableVirtualMemory": "134213349 MB",
+        "cores": 32,
+        "cpuAgentCount": 0,
+        "cpuFamily": 26,
+        "cpuModel": 68,
+        "cpuModelName": "AMD Ryzen 9 9950X 16-Core Processor",
+        "cpuTopology": [
+            [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                3,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                4,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                5,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                6,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                7,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                8,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                9,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                10,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                11,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                12,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                13,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                14,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                15,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                16,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                17,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                18,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                19,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                20,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                21,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                22,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                23,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                24,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                25,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                26,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                27,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                28,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                29,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                30,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                31,
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "eventColumnIds": [
+            {
+                "category": 1,
+                "categoryName": "CPU PROFILE",
+                "events": [
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "The number of cpu cycles when the thread is not in halt state.",
+                        "encodedId": 50331766,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 118,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "CYCLES_NOT_IN_HALT",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 0,
+                        "usrMode": true
+                    },
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "The number of instructions retired from execution. This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction.",
+                        "encodedId": 50331840,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 192,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "RETIRED_INST",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 0,
+                        "usrMode": true
+                    },
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "The number of load and store ops dispatched to LS unit. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address.",
+                        "encodedId": 50790441,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 41,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "L1_DC_ACCESSES_ALL",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 7,
+                        "usrMode": true
+                    },
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "Number of packed 512-bit floating point micro-ops retired.",
+                        "encodedId": 52428808,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 8,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "PACK_512_UOPS_RETIRED",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 32,
+                        "usrMode": true
+                    },
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "The L2 cache access requests due to L1 data cache misses. This also counts hardware and software prefetches",
+                        "encodedId": 65011808,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 96,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "L2_CACHE_ACCESS_FROM_L1_DC_MISS",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 224,
+                        "usrMode": true
+                    },
+                    {
+                        "callstack": false,
+                        "category": 1,
+                        "cmask": 0,
+                        "description": "The L1 Data Translation Lookaside Buffer (DTLB) Misses from load store micro-ops. This event counts both L2-DTLB hit and L2-DTLB Miss.",
+                        "encodedId": 67043397,
+                        "eventCategory": 0,
+                        "expression": "",
+                        "fetchL3MissOnly": false,
+                        "fetchLoadLatency": false,
+                        "frequency": 0,
+                        "hwEventId": 69,
+                        "interval": 250000,
+                        "invCmask": false,
+                        "isFrequencyMode": false,
+                        "isRawEvent": true,
+                        "isTimeSeriesData": true,
+                        "name": "L1_DTLB_MISSES",
+                        "opDispatchedCount": false,
+                        "opL3MissOnly": false,
+                        "opLoadLatency": false,
+                        "opStreamStore": false,
+                        "osMode": true,
+                        "samples": 0,
+                        "smcSource": 0,
+                        "threshold": 0,
+                        "traceMode": 0,
+                        "unit": "",
+                        "unitMask": 255,
+                        "usrMode": true
+                    }
+                ]
+            }
+        ],
+        "guest": false,
+        "guestKallsyms": "",
+        "guestKmodules": "",
+        "guestPid": 3908214304,
+        "guestSymPaths": "",
+        "host": false,
+        "hypervisorEnabled": true,
+        "hypervisorVendor": "Microsoft Hyper-V",
+        "ibsIdentifiers": 0,
+        "ibsOpSampling": false,
+        "isCacheline": false,
+        "isFreqMode": false,
+        "issmtEnabled": true,
+        "onlineCores": 32,
+        "osName": "Win1125H2-64",
+        "p0Freq": 0,
+        "profScope": "Single Application",
+        "profiledPids": "70736;",
+        "totalPages": "118428 MB",
+        "totalRam": "63132 MB",
+        "totalVirtualMemory": "134217727 MB"
+    },
+    "categoriesCollected": [
+        "cpu"
+    ],
+    "collectCommand": "AMDuProfCLI.exe profile --event event=CYCLES_NOT_IN_HALT,interval=250000 --event event=RETIRED_INST,interval=250000 --event event=PACK_512_UOPS_RETIRED,interval=250000 --event event=L1_DC_ACCESSES_ALL,interval=250000 --event event=L2_CACHE_ACCESS_FROM_L1_DC_MISS,interval=250000 --event event=L1_DTLB_MISSES,interval=250000 --affinity 0 --output-dir C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\results\\uprof\\phase5a\\small_cache_resident_gcc-native\\attempt_01 --show-event-count --stdout --report-output C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\results\\uprof\\phase5a\\small_cache_resident_gcc-native\\attempt_01\\uprof_report.csv --working-dir C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\build-gcc-native\\benchmark_runner.exe --kernel elementwise_multiply --datatype float32 --build gcc-native --compiler GCC16.2.0 --flags gcc-native --n 2048 --target-working-set-bytes 24576 --warmups 3 --repetitions 1000 --batch 128 --output C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\results\\uprof\\phase5a\\small_cache_resident_gcc-native\\attempt_01\\profiler_instrumented_timing.csv",
+    "collection": {
+        "branch-filter": 511,
+        "callstack": {
+            "callstackSize": 0,
+            "fpo": false,
+            "interval": 0,
+            "scope": 0,
+            "unwindDepth": 0
+        },
+        "customProfileEventMap": {
+            "keys": null,
+            "values": null
+        },
+        "dataBufferCount": 0,
+        "events": {
+            "configName": "Custom Profile",
+            "configType": 1,
+            "cpuTraceSourceMask": 0,
+            "ibsEvents": {
+                "cacheAnalysis": false,
+                "fetch": false,
+                "fetchCallstack": true,
+                "fetchInterval": 0,
+                "fetchL3Miss": false,
+                "fetchLoadLatency": 0,
+                "fetchOs": true,
+                "fetchUser": true,
+                "loadStoreOnly": false,
+                "op": false,
+                "opCallstack": true,
+                "opCycleCount": false,
+                "opInterval": 0,
+                "opL3Miss": false,
+                "opLoadLatency": 0,
+                "opOs": true,
+                "opStreamStore": false,
+                "opUser": true,
+                "randomize": true
+            },
+            "pmcEvents": {
+                "pmcEventList": [
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 50331766,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 118,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 0,
+                        "os": true,
+                        "user": true
+                    },
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 50331840,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 192,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 0,
+                        "os": true,
+                        "user": true
+                    },
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 52428808,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 8,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 32,
+                        "os": true,
+                        "user": true
+                    },
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 50790441,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 41,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 7,
+                        "os": true,
+                        "user": true
+                    },
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 65011808,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 96,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 224,
+                        "os": true,
+                        "user": true
+                    },
+                    {
+                        "cntMask": 0,
+                        "collectCallstack": false,
+                        "encodedEventId": 67043397,
+                        "guest": false,
+                        "host": false,
+                        "hwId": 69,
+                        "interval": 250000,
+                        "intx": false,
+                        "intxcp": false,
+                        "invertCntMask": false,
+                        "isEdgeDetect": false,
+                        "isFrequencyMode": false,
+                        "isSampling": true,
+                        "mask": 255,
+                        "os": true,
+                        "user": true
+                    }
+                ]
+            },
+            "predefinedProfileType": 5,
+            "samplingModeMask": 1
+        },
+        "flags": {
+            "collectSysModules": false,
+            "cssDefaultValues": false,
+            "defaultBranchAnalysis": false,
+            "hasCallstack": false,
+            "isThreadConcurrency": false,
+            "maxDataFileSize": 0,
+            "perEventCSSDefault": false,
+            "profileMpi": false,
+            "profileSamplinModeBpf": false,
+            "pythonTraceOptions": false,
+            "traceMpi": false,
+            "traceMpiMode": 0,
+            "traceOpenmp": false,
+            "traceOpenmpMode": 0,
+            "traceOpenmpType": 0
+        },
+        "globalFrequency": 0,
+        "globalSamplingInterval": 0,
+        "hostP0Freqs": [
+            {
+                "host": "Navnil_Desktop",
+                "p0Freq": 4300.0
+            }
+        ],
+        "hotspotsProfilingSignal": -1,
+        "lbr": false,
+        "livePower": null,
+        "metadataSource": 0,
+        "mmapBuffer": 0,
+        "profileChildren": true,
+        "schedule": {
+            "categoryDurations": [
+                {
+                    "category": 1,
+                    "categoryName": "CPU PROFILE",
+                    "end": 837981934154100,
+                    "start": 837981332908500,
+                    "type": 0
+                }
+            ],
+            "elapsed": 602,
+            "end": 837981934154100,
+            "endTs": "Fri Oct 23 18:18:13 2026",
+            "hostDurations": [
+                {
+                    "end": 837981934154100,
+                    "host": "Navnil_Desktop",
+                    "start": 837981332908500
+                }
+            ],
+            "profileCollectionDataLimitType": 0,
+            "profileDuration": 0,
+            "start": 837981332908500,
+            "startDelay": 0,
+            "startTs": "Fri Oct 23 18:18:12 2026",
+            "type": 2
+        },
+        "sessionVersion": 9,
+        "target": {
+            "appArgs": "--kernel elementwise_multiply --datatype float32 --build gcc-native --compiler GCC16.2.0 --flags gcc-native --n 2048 --target-working-set-bytes 24576 --warmups 3 --repetitions 1000 --batch 128 --output C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\results\\uprof\\phase5a\\small_cache_resident_gcc-native\\attempt_01\\profiler_instrumented_timing.csv ",
+            "coreAffinity": "1",
+            "coreMask": "FFFFFFFF",
+            "gpuCollectAgentVersion": 0,
+            "gpuFamily": "",
+            "gpuRocprofVersion": 0,
+            "launchApp": "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\build-gcc-native\\benchmark_runner.exe",
+            "profileCores": false,
+            "systemWide": false,
+            "terminateApp": false,
+            "workingDir": "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd"
+        }
+    },
+    "deviceInfo": {
+        "keys": [
+            0
+        ],
+        "values": [
+            {
+                "keys": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                ],
+                "values": [
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ],
+                    [
+                        0,
+                        5032704
+                    ]
+                ]
+            }
+        ]
+    },
+    "generatedDBs": [
+        {
+            "category": 8192,
+            "categoryName": "callstack",
+            "databaseName": "callstack"
+        },
+        {
+            "category": 1,
+            "categoryName": "cpu",
+            "databaseName": "cpu"
+        }
+    ],
+    "hpc": {
+        "hostName": "Navnil_Desktop"
+    },
+    "profileType": 1,
+    "reportCommand": "",
+    "translateCommand": "",
+    "translation": [
+        {
+            "aggregateCoreLevel": false,
+            "aggregateInst": true,
+            "aggregateInterval": 1,
+            "asciiFlags": 0,
+            "cachePath": "",
+            "category": 1,
+            "categoryNames": "CPU PROFILE",
+            "dataCoarsenessLevel": 1,
+            "dbType": "duckdb",
+            "debugSymbolsPath": "",
+            "hostName": "",
+            "mpiInputDir": "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project1-simd\\results\\uprof\\phase5a\\small_cache_resident_gcc-native\\attempt_01\\AMDuProf-benchmark_runner-Custom_Oct-23-2026_18-18-12\\cpu",
+            "processInlineFunctions": false,
+            "showPyIntrepFrames": false,
+            "summaryTimelineSz": 5000,
+            "symbolServerDirs": "",
+            "useLegacySymbolDowloader": false
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "gcc-scalar",
+      "displayName": "GCC optimized scalar-only",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-gcc-scalar",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -fno-tree-vectorize -fno-tree-loop-vectorize -fno-tree-slp-vectorize -fopt-info-vec-all",
+        "PROJECT_CORRECTNESS_CSV": "${sourceDir}/data/processed/correctness_gcc_scalar.csv",
+        "PROJECT_CORRECTNESS_SUMMARY": "${sourceDir}/results/tables/correctness_gcc_scalar.md"
+      }
+    },
+    {
+      "name": "gcc-auto",
+      "displayName": "GCC O3 auto-vectorized",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-gcc-auto",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -fopt-info-vec-all",
+        "PROJECT_CORRECTNESS_CSV": "${sourceDir}/data/processed/correctness_gcc_auto.csv",
+        "PROJECT_CORRECTNESS_SUMMARY": "${sourceDir}/results/tables/correctness_gcc_auto.md"
+      }
+    },
+    {
+      "name": "gcc-native",
+      "displayName": "GCC O3 native-target auto-vectorized",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-gcc-native",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -march=native -fopt-info-vec-all",
+        "PROJECT_CORRECTNESS_CSV": "${sourceDir}/data/processed/correctness_gcc_native.csv",
+        "PROJECT_CORRECTNESS_SUMMARY": "${sourceDir}/results/tables/correctness_gcc_native.md"
+      }
+    },
+    {
+      "name": "clang-auto",
+      "displayName": "Clang O3 auto-vectorized cross-check",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-clang-auto",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;C:/Program Files/LLVM/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang++.exe",
+        "CMAKE_CXX_COMPILER_TARGET": "x86_64-w64-windows-gnu",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -Rpass=loop-vectorize -Rpass-missed=loop-vectorize -Rpass-analysis=loop-vectorize",
+        "PROJECT_CORRECTNESS_CSV": "${sourceDir}/data/processed/correctness_clang_auto.csv",
+        "PROJECT_CORRECTNESS_SUMMARY": "${sourceDir}/results/tables/correctness_clang_auto.md"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "gcc-scalar", "configurePreset": "gcc-scalar", "jobs": 4 },
+    { "name": "gcc-auto", "configurePreset": "gcc-auto", "jobs": 4 },
+    { "name": "gcc-native", "configurePreset": "gcc-native", "jobs": 4 },
+    { "name": "clang-auto", "configurePreset": "clang-auto", "jobs": 4 }
+  ],
+  "testPresets": [
+    {
+      "name": "gcc-scalar",
+      "configurePreset": "gcc-scalar",
+      "environment": { "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}" },
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "gcc-auto",
+      "configurePreset": "gcc-auto",
+      "environment": { "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}" },
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "gcc-native",
+      "configurePreset": "gcc-native",
+      "environment": { "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}" },
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "clang-auto",
+      "configurePreset": "clang-auto",
+      "environment": { "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}" },
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

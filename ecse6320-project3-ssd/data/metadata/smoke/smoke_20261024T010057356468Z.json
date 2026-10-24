@@ -1,0 +1,53 @@
+{
+  "classification": "NOT FOR PERFORMANCE ANALYSIS",
+  "resolved_path": "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\benchmark_data\\fio_smoke_test.bin",
+  "file_size_bytes": 16777216,
+  "io_range_bytes": 16777216,
+  "total_io_bytes": 4194304,
+  "fio_executable": "C:\\Program Files\\fio\\fio.exe",
+  "engine": "windowsaio",
+  "direct": 1,
+  "workload": "randrw (50/50 read/write)",
+  "block_size_bytes": 4096,
+  "iodepth": 1,
+  "numjobs": 1,
+  "timestamp_utc": "20261024T010057356468Z",
+  "fio_command_argv": [
+    "C:\\Program Files\\fio\\fio.exe",
+    "--output=C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\data\\raw\\smoke\\smoke_20261024T010057356468Z.json",
+    "--output-format=json",
+    "--filename=C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\benchmark_data\\fio_smoke_test.bin",
+    "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\configs\\fio\\smoke.fio"
+  ],
+  "parser_command_argv": [
+    "C:\\Users\\CHOUDN3\\AppData\\Local\\anaconda3\\python.exe",
+    "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\scripts\\python\\parse_fio.py",
+    "--input",
+    "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\data\\raw\\smoke\\smoke_20261024T010057356468Z.json",
+    "--output",
+    "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\data\\parsed\\smoke\\smoke_20261024T010057356468Z.csv",
+    "--expect-smoke"
+  ],
+  "actual_json_validation": {
+    "regular_file_target": "C:\\Users\\CHOUDN3\\Downloads\\EcSE_4320\\ecse6320-project3-ssd\\benchmark_data\\fio_smoke_test.bin",
+    "ioengine": "windowsaio",
+    "direct": 1,
+    "iodepth": 1,
+    "numjobs": 1,
+    "read_io_bytes": 2031616,
+    "write_io_bytes": 2162688,
+    "read_percentile_keys": [
+      "50.000000",
+      "95.000000",
+      "99.000000",
+      "99.900000"
+    ],
+    "write_percentile_keys": [
+      "50.000000",
+      "95.000000",
+      "99.000000",
+      "99.900000"
+    ]
+  },
+  "target_cleanup": "deleted after validation"
+}

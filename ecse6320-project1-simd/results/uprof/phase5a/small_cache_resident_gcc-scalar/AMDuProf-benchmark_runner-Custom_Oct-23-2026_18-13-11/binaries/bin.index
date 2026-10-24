@@ -1,0 +1,14 @@
+c:\windows\system32\kernelbase.dll;c:\windows\system32\kernelbase.dll
+
+c:\windows\system32\ntdll.dll;c:\windows\system32\ntdll.dll
+
+c:\windows\system32\rpcrt4.dll;c:\windows\system32\rpcrt4.dll
+
+c:\windows\system32\sechost.dll;c:\windows\system32\sechost.dll
+
+c:\windows\system32\ucrtbase.dll;c:\windows\system32\ucrtbase.dll
+
+c:\windows\system32\msvcrt.dll;c:\windows\system32\msvcrt.dll
+
+c:\msys64\ucrt64\bin\libstdc++-6.dll;c:\msys64\ucrt64\bin\libstdc++-6.dll
+

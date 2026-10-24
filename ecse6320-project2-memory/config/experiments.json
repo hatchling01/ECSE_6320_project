@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "seed": 43206320,
+  "cpu": 0,
+  "repetitions": {"critical_latency": 5, "default": 3},
+  "latency_bytes": [16384, 524288, 16777216, 536870912],
+  "phase2_bytes": 1073741824,
+  "strides": [64, 256, 1024],
+  "patterns": ["sequential", "random"],
+  "read_percentages": [100, 70, 50, 0],
+  "workers": [0, 1, 2, 4, 8, 12, 15],
+  "loaded": {"probe_bytes": 536870912, "worker_bytes": 134217728, "warmup_ms": 1000, "duration_ms": 5000},
+  "working_set_bytes": [16384,32768,49152,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728,268435456,536870912,1073741824],
+  "tlb_pages": [16,64,256,1024,4096,16384],
+  "allocation_cap_bytes": 8589934592,
+  "available_gate_bytes": 17179869184
+}

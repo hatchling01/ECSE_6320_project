@@ -1,0 +1,33 @@
+kernel,datatype,compiler,build,vectorized,observed_width,key_instructions,fma,tail_strategy,evidence
+axpy,float32,GCC,gcc-scalar,no,none,mulss+addss,no,scalar loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+axpy,float64,GCC,gcc-scalar,no,none,mulsd+addsd,no,scalar loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+axpy,float32,GCC,gcc-auto,yes,128-bit XMM 4 lanes,mulps+addps,no,scalar cleanup branch,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+axpy,float64,GCC,gcc-auto,yes,128-bit XMM 2 lanes,mulpd+addpd,no,scalar cleanup branch,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+axpy,float32,GCC,gcc-native,yes,512-bit ZMM 16 lanes,vfmadd213ps+vfmadd132ps,packed FMA,masked vector epilogue plus scalar path,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+axpy,float64,GCC,gcc-native,yes,512-bit ZMM 8 lanes,vfmadd213pd+vfmadd132pd,packed FMA,masked vector epilogue plus scalar path,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+axpy,float32,Clang,clang-auto,yes,128-bit XMM 4 lanes,mulps+addps,no,scalar cleanup/fallback,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+axpy,float64,Clang,clang-auto,yes,128-bit XMM 2 lanes,mulpd+addpd,no,scalar cleanup/fallback,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+dot_product,float32,GCC,gcc-scalar,no,none,mulss+addss,no,scalar accumulation loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+dot_product,float64,GCC,gcc-scalar,no,none,mulsd+addsd,no,scalar accumulation loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+dot_product,float32,GCC,gcc-auto,yes,128-bit XMM 4 lanes,mulps plus vector reduction,no,vector and scalar reduction/remainder,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+dot_product,float64,GCC,gcc-auto,yes,128-bit XMM 2 lanes,mulpd plus vector reduction,no,vector and scalar reduction/remainder,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+dot_product,float32,GCC,gcc-native,yes,512-bit ZMM 16 lanes,vmulps plus vector reduction,scalar cleanup only,no packed FMA; vector epilogues plus reduction,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+dot_product,float64,GCC,gcc-native,yes,512-bit ZMM 8 lanes,vmulpd plus vector reduction,scalar cleanup only,no packed FMA; vector epilogues plus reduction,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+dot_product,float32,Clang,clang-auto,no,none,mulss+addss,no,strict-FP scalar reduction,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+dot_product,float64,Clang,clang-auto,no,none,mulsd+addsd,no,strict-FP scalar reduction,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+elementwise_multiply,float32,GCC,gcc-scalar,no,none,mulss,no,scalar loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+elementwise_multiply,float64,GCC,gcc-scalar,no,none,mulsd,no,scalar loop,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+elementwise_multiply,float32,GCC,gcc-auto,yes,128-bit XMM 4 lanes,mulps,no,scalar/short-vector cleanup,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+elementwise_multiply,float64,GCC,gcc-auto,yes,128-bit XMM 2 lanes,mulpd,no,scalar cleanup,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+elementwise_multiply,float32,GCC,gcc-native,yes,512-bit ZMM 16 lanes,vmulps,no,masked ZMM epilogue,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+elementwise_multiply,float64,GCC,gcc-native,yes,512-bit ZMM 8 lanes,vmulpd,no,masked ZMM epilogue,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+elementwise_multiply,float32,Clang,clang-auto,yes,128-bit XMM 4 lanes,mulps,no,scalar cleanup/fallback,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+elementwise_multiply,float64,Clang,clang-auto,yes,128-bit XMM 2 lanes,mulpd,no,scalar cleanup/fallback,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+stencil_1d_three_point,float32,GCC,gcc-scalar,no,none,mulss+addss,no,scalar interior loop and boundaries,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+stencil_1d_three_point,float64,GCC,gcc-scalar,no,none,mulsd+addsd,no,scalar interior loop and boundaries,gcc-scalar-kernels.cpp-vectorization.txt;gcc-scalar-kernels.asm
+stencil_1d_three_point,float32,GCC,gcc-auto,yes,128-bit XMM 4 lanes,mulps+addps,no,scalar cleanup and boundary handling,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+stencil_1d_three_point,float64,GCC,gcc-auto,yes,128-bit XMM 2 lanes,mulpd+addpd,no,scalar cleanup and boundary handling,gcc-auto-kernels.cpp-vectorization.txt;gcc-auto-kernels.asm
+stencil_1d_three_point,float32,GCC,gcc-native,yes,512-bit ZMM 16 lanes,vfmadd132ps+vfmadd231ps,packed FMA,masked vector epilogue and boundaries,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+stencil_1d_three_point,float64,GCC,gcc-native,yes,512-bit ZMM 8 lanes,vfmadd132pd+vfmadd231pd,packed FMA,masked vector epilogue and boundaries,gcc-native-kernels.cpp-vectorization.txt;gcc-native-kernels.asm
+stencil_1d_three_point,float32,Clang,clang-auto,yes,128-bit XMM 4 lanes,mulps+addps,no,scalar cleanup and boundaries,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm
+stencil_1d_three_point,float64,Clang,clang-auto,yes,128-bit XMM 2 lanes,mulpd+addpd,no,scalar cleanup and boundaries,clang-auto-kernels.cpp-vectorization.txt;clang-auto-kernels.asm

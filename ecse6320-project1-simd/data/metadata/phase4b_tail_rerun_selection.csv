@@ -1,0 +1,15 @@
+build,base_name,base_n,remainder,N,initial_cv,selection_reason
+gcc-auto,small_cache,3072,9,3081,1.1620805322974497,initial_cv_gt_20_percent
+gcc-auto,small_cache,3072,12,3084,0.25688300224537086,initial_cv_gt_20_percent
+gcc-auto,larger_cache,524288,0,524288,0.782200440795245,initial_cv_gt_20_percent
+gcc-auto,larger_cache,524288,12,524300,0.20954277997588155,initial_cv_gt_20_percent
+gcc-native,larger_cache,524288,1,524289,0.2992673819776387,initial_cv_gt_20_percent
+gcc-native,larger_cache,524288,2,524290,0.40619506500069646,initial_cv_gt_20_percent
+gcc-native,larger_cache,524288,3,524291,0.2373328217000928,initial_cv_gt_20_percent
+gcc-native,larger_cache,524288,6,524294,0.22770905449251935,initial_cv_gt_20_percent
+gcc-native,larger_cache,524288,10,524298,0.20876311626178345,initial_cv_gt_20_percent
+gcc-scalar,small_cache,3072,0,3072,0.6059828662873352,initial_cv_gt_20_percent
+gcc-scalar,small_cache,3072,3,3075,0.2162097733648613,initial_cv_gt_20_percent
+gcc-scalar,larger_cache,524288,5,524293,0.7284740398016074,initial_cv_gt_20_percent
+gcc-scalar,larger_cache,524288,11,524299,0.21582817915453617,initial_cv_gt_20_percent
+gcc-scalar,larger_cache,524288,15,524303,0.21255832472657868,initial_cv_gt_20_percent

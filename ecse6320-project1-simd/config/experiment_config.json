@@ -1,0 +1,171 @@
+{
+  "project": "ECSE 4320/6320 Project #1: SIMD Advantage Profiling",
+  "phase": 3,
+  "status": "Phase 3 matrix collected; variability and targeted rerun documented",
+  "kernels": [
+    "axpy",
+    "dot_product",
+    "elementwise_multiply",
+    "stencil_1d_three_point"
+  ],
+  "datatypes": [
+    "float32",
+    "float64"
+  ],
+  "build_variants": [
+    "scalar",
+    "auto_vectorized",
+    "cpu_targeted"
+  ],
+  "primary_compiler": "GCC 16.2.0 (MSYS2 UCRT64)",
+  "compiler_flags": {
+    "scalar": "-O3 -DNDEBUG -fno-tree-vectorize -fno-tree-loop-vectorize -fno-tree-slp-vectorize",
+    "auto_vectorized": "-O3 -DNDEBUG",
+    "cpu_targeted": "-O3 -DNDEBUG -march=native"
+  },
+  "pilot": {
+    "kernel": "elementwise_multiply",
+    "raw_file": "pilot_raw_v2.csv",
+    "datatypes": ["float32", "float64"],
+    "build_variants": ["scalar", "auto_vectorized", "cpu_targeted"],
+    "target_working_set_sizes_bytes": [4096, 524288, 2097152, 25165824, 50331648, 134217728],
+    "initial_warmups": 3,
+    "initial_repetitions": 5,
+    "maximum_repetitions": 10,
+    "batching": {
+      "n_at_most": 4096,
+      "batch_count": 128,
+      "n_at_most_next": 65536,
+      "batch_count_next": 32,
+      "otherwise": 1
+    },
+    "cpu_affinity": "logical CPU 0"
+  },
+  "full_matrix": {
+    "raw_file": "phase3_raw_v3.csv",
+    "targeted_rerun_file": "phase3_v3_targeted_rerun_raw.csv",
+    "target_working_set_sizes_bytes": [8192, 24576, 65536, 262144, 1048576, 4194304, 8388608, 16777216, 25165824, 33554432, 41943040, 50331648, 67108864, 100663296, 134217728],
+    "repetitions": 10,
+    "warmups": 3,
+    "maximum_timed_samples": 4000
+  },
+  "phase4a_alignment": {
+    "kernels": ["axpy", "elementwise_multiply"],
+    "datatypes": ["float32", "float64"],
+    "builds": ["gcc-scalar", "gcc-auto", "gcc-native"],
+    "target_working_set_sizes_bytes": [24576, 25165824, 134217728],
+    "alignment_bytes": 64,
+    "conditions": [
+      {"name": "aligned_64B", "offset_float32_elements": 0, "offset_float64_elements": 0, "expected_pointer_mod64": 0},
+      {"name": "offset_one_element", "offset_float32_elements": 1, "offset_float64_elements": 1, "expected_pointer_mod64_float32": 4, "expected_pointer_mod64_float64": 8},
+      {"name": "cache_line_crossing", "offset_float32_elements": 15, "offset_float64_elements": 7, "expected_pointer_mod64_float32": 60, "expected_pointer_mod64_float64": 56}
+    ],
+    "warmups": 3,
+    "initial_repetitions": 5,
+    "maximum_repetitions": 10,
+    "batching": {
+      "n_at_most": 4096,
+      "batch_count": 128,
+      "n_at_most_next": 65536,
+      "batch_count_next": 32,
+      "otherwise": 1
+    },
+    "cpu_affinity": "logical CPU 0",
+    "raw_file": "phase4a_alignment_raw.csv"
+  },
+  "phase4b_tail": {
+    "kernel": "axpy",
+    "datatype": "float32",
+    "builds": ["gcc-scalar", "gcc-auto", "gcc-native"],
+    "base_sizes": [
+      {"name": "small_cache", "base_n": 3072, "target_working_set_bytes": 24576},
+      {"name": "larger_cache", "base_n": 524288, "target_working_set_bytes": 4194304}
+    ],
+    "remainders": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "observed_float32_lanes": {"gcc-scalar": 1, "gcc-auto": 4, "gcc-native": 16},
+    "warmups": 3,
+    "initial_repetitions": 5,
+    "rerun_repetitions": 5,
+    "maximum_repetitions": 10,
+    "rerun_cv_threshold": 0.20,
+    "batching": {
+      "n_at_most": 4096,
+      "batch_count": 128,
+      "n_at_most_next": 65536,
+      "batch_count_next": 32,
+      "otherwise": 1
+    },
+    "cpu_affinity": "logical CPU 0",
+    "raw_file": "phase4b_tail_raw.csv",
+    "targeted_rerun_file": "phase4b_tail_targeted_reruns.csv"
+  },
+  "phase4c_stride": {
+    "kernel": "elementwise_multiply_strided",
+    "datatype": "float32",
+    "builds": ["gcc-scalar", "gcc-auto", "gcc-native"],
+    "strides": [1, 2, 4, 8],
+    "spans": [
+      {"name": "small_cache", "span_elements": 2048, "allocated_span_bytes_per_buffer": 8192, "allocated_total_bytes": 24576},
+      {"name": "intermediate_cache_scale", "span_elements": 2097152, "allocated_span_bytes_per_buffer": 8388608, "allocated_total_bytes": 25165824},
+      {"name": "large_dram_sensitive", "span_elements": 11184808, "allocated_span_bytes_per_buffer": 44739232, "allocated_total_bytes": 134217696}
+    ],
+    "array_count": 3,
+    "warmups": 3,
+    "initial_repetitions": 5,
+    "rerun_repetitions": 5,
+    "maximum_repetitions": 10,
+    "rerun_cv_threshold": 0.20,
+    "batching": {
+      "n_at_most": 4096,
+      "batch_count": 128,
+      "n_at_most_next": 65536,
+      "batch_count_next": 32,
+      "otherwise": 1
+    },
+    "cpu_affinity": "logical CPU 0",
+    "raw_file": "phase4c_stride_raw.csv",
+    "targeted_rerun_file": "phase4c_stride_targeted_reruns.csv"
+  },
+  "phase5a_uprof": {
+    "kernel": "elementwise_multiply",
+    "datatype": "float32",
+    "builds": ["gcc-scalar", "gcc-auto", "gcc-native"],
+    "profile_sizes": [
+      {"name": "small_cache_resident", "target_working_set_bytes": 24576, "n": 2048, "batch": 128, "profile_repetitions": 1000},
+      {"name": "intermediate_cache_scale", "target_working_set_bytes": 25165824, "n": 2097152, "batch": 1, "profile_repetitions": 100},
+      {"name": "large_dram_sensitive", "target_working_set_bytes": 134217728, "n": 11184810, "batch": 1, "profile_repetitions": 10}
+    ],
+    "uProf_config": "custom_six_core_pmc_events",
+    "base_events": [
+      "CYCLES_NOT_IN_HALT (PMCx076)",
+      "RETIRED_INST (PMCx0C0)"
+    ],
+    "simd_activity_event_by_build": {
+      "gcc-scalar": "SCALAR_UOPS_RETIRED (PMCx008 umask 0x04)",
+      "gcc-auto": "PACK_128_UOPS_RETIRED (PMCx008 umask 0x08)",
+      "gcc-native": "PACK_512_UOPS_RETIRED (PMCx008 umask 0x20)"
+    },
+    "additional_events": [
+      "L1_DC_ACCESSES_ALL (PMCx029 umask 0x07)",
+      "L2_CACHE_ACCESS_FROM_L1_DC_MISS (PMCx060 umask 0xE0)",
+      "L1_DTLB_MISSES (PMCx045 umask 0xFF)"
+    ],
+    "sampling_interval": 250000,
+    "cpu_affinity": 0,
+    "maximum_profile_runs": 9,
+    "raw_directory": "results/uprof/phase5a"
+  },
+  "strides": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "working_set_sizes_bytes": [8192, 24576, 65536, 262144, 1048576, 4194304, 8388608, 16777216, 25165824, 33554432, 41943040, 50331648, 67108864, 100663296, 134217728],
+  "repetitions": 10,
+  "warmups": 3,
+  "alignment_offsets_bytes": null,
+  "tail_sizes": null,
+  "cpu_affinity": "logical CPU 0",
+  "notes": "pilot_raw.csv and its reruns preserve the initial harness pilot; pilot_raw_v2.csv uses the corrected elementwise-only allocation path. phase3_raw.csv is superseded because its harness initialized unused buffers; phase3_raw_v2.csv is partial because strict float32 dot verification stopped it. phase3_raw_v3.csv uses kernel-specific active buffers and representative N=1003 correctness gates before each kernel/type/build sweep. The corrected pilot informed 10 full-matrix repetitions (maximum allowed) and a recorded batching rule. High-CV configurations are preserved and documented. Sizes are total active-kernel working-set bytes; direct L3/DF/UMC counters are unavailable. No benchmark is launched automatically by configuring or building. Phase 4A alignment settings are isolated in phase4a_alignment, Phase 4B tail settings in phase4b_tail, Phase 4C fixed-span stride settings in phase4c_stride, Phase 5A representative uProf settings in phase5a_uprof; Phase 3 raw datasets are preserved."
+}

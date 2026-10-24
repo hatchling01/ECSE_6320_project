@@ -1,0 +1,22 @@
+SAFE REGULAR-FILE TARGET VERIFIED
+classification=PRODUCTION
+run_id=phase6_device_state_sequential_write_1m_qd8_rep1_20261024T0108103861Z
+resolved_target=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\benchmark_data\fio_production.bin
+file_range_bytes=8589934592
+fio_executable=C:\Program Files\fio\fio.exe
+engine=windowsaio
+direct=1
+workload=write
+block_size=1m
+iodepth=8
+numjobs=1
+working_directory=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\benchmark_data
+filename_argument=fio_production.bin
+free_bytes_before=597830135808
+logical_writes_before=43294674944
+projected_max_write_bytes=8589934592
+command="C:\Program Files\fio\fio.exe" --name=device_state_sequential_write_1m_qd8 --output=C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project3-ssd\data\raw\phase6\phase6_device_state_sequential_write_1m_qd8_rep1_20261024T0108103861Z.json --output-format=json --filename=fio_production.bin --ioengine=windowsaio --direct=1 --thread=1 --group_reporting=1 --rw=write --bs=1m --iodepth=8 --numjobs=1 --size=8589934592 --percentile_list=50:95:99:99.9 --randrepeat=1 --refill_buffers=1 --buffer_compress_percentage=0 --time_based=0 --io_size=8589934592 --write_bw_log=phase6_device_state_sequential_write_1m_qd8_rep1_20261024T0108103861Z --log_avg_msec=1000
+ACTUAL JSON TARGET VALIDATED
+logical_bytes_written=8589934592
+cumulative_logical_bytes_written=51884609536
+RUN VALIDATED

@@ -1,0 +1,89 @@
+
+"AMD uProf (Version:5.3.521.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+Command Line Arguments:,"--kernel elementwise_multiply --datatype float32 --build gcc-auto --compiler GCC16.2.0 --flags gcc-auto --n 11184810 --target-working-set-bytes 134217728 --warmups 3 --repetitions 10 --batch 1 --output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\large_dram_sensitive_gcc-auto\attempt_01\profiler_instrumented_timing.csv "
+Working Directory:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd"
+Environment Variables:
+CPU Details:,"Family(0x1a), Model(0x44), Number of Cores(32)"
+Operating System:,"Win1125H2-64"
+Profile Command:,"AMDuProfCLI.exe profile --event event=CYCLES_NOT_IN_HALT,interval=250000 --event event=RETIRED_INST,interval=250000 --event event=PACK_128_UOPS_RETIRED,interval=250000 --event event=L1_DC_ACCESSES_ALL,interval=250000 --event event=L2_CACHE_ACCESS_FROM_L1_DC_MISS,interval=250000 --event event=L1_DTLB_MISSES,interval=250000 --affinity 0 --output-dir C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\large_dram_sensitive_gcc-auto\attempt_01 --show-event-count --stdout --report-output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\large_dram_sensitive_gcc-auto\attempt_01\uprof_report.csv --working-dir C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe --kernel elementwise_multiply --datatype float32 --build gcc-auto --compiler GCC16.2.0 --flags gcc-auto --n 11184810 --target-working-set-bytes 134217728 --warmups 3 --repetitions 10 --batch 1 --output C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\large_dram_sensitive_gcc-auto\attempt_01\profiler_instrumented_timing.csv"
+
+PROFILE DETAILS
+Profile Session Type:,"Custom Profile"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-31"
+CPU Affinity Mask:,"0"
+Profile Start Time:,"Fri Oct 23 18:18:27 2026"
+Profile End Time:,"Fri Oct 23 18:18:27 2026"
+Profile Duration:,"0.698 seconds"
+Data Folder:,"C:\Users\CHOUDN3\Downloads\EcSE_4320\ecse6320-project1-simd\results\uprof\phase5a\large_dram_sensitive_gcc-auto\attempt_01\AMDuProf-benchmark_runner-Custom_Oct-23-2026_18-18-26"
+Virtual Machine:,"Yes"
+Hypervisor Vendor:,"Microsoft Hyper-V"
+Call Stack Sampling:,"False"
+Selected View:,"All Events"
+
+MONITORED EVENTS
+PMC Events:,Name,Interval,Unitmask,Countmask,Invert Countmask,User,OS,Description
+,"CYCLES_NOT_IN_HALT (PMCx076)",250000,0x00,0x00,False,True,True,"The number of cpu cycles when the thread is not in halt state."
+,"RETIRED_INST (PMCx0C0)",250000,0x00,0x00,False,True,True,"The number of instructions retired from execution. This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction."
+,"L1_DC_ACCESSES_ALL (PMCx029)",250000,0x07,0x00,False,True,True,"The number of load and store ops dispatched to LS unit. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address."
+,"PACK_128_UOPS_RETIRED (PMCx008)",250000,0x08,0x00,False,True,True,"Number of packed 128-bit floating point micro-ops retired."
+,"L2_CACHE_ACCESS_FROM_L1_DC_MISS (PMCx060)",250000,0xE0,0x00,False,True,True,"The L2 cache access requests due to L1 data cache misses. This also counts hardware and software prefetches"
+,"L1_DTLB_MISSES (PMCx045)",250000,0xFF,0x00,False,True,True,"The L1 Data Translation Lookaside Buffer (DTLB) Misses from load store micro-ops. This event counts both L2-DTLB hit and L2-DTLB Miss."
+
+
+DERIVED METRICS
+Metric Name,Expression,Description
+"IPC","RETIRED_INST / CYCLES_NOT_IN_HALT","The average number of retired instructions per CPU Cycle. The lower IPC value means the application consumes more cycles due to  cache misses, branch mispredictions, pipeline stalls, I/O or any other performance bottlenecks."
+"CPI","CYCLES_NOT_IN_HALT / RETIRED_INST","The average number of CPU cycles consumed to retire an instruction. This metric is computed as the ratio of CYCLES_NOT_IN_HALT to RETIRED_INST event. The higher values means the application consumes more CPU cycles to retire an instruction due to high cache misses, branch mispredictions, pipeline stalls, I/O or any other bottlenecks. If the CPI values exceeds a threshold value, it will be highlighted in pink."
+"L1_DC_ACCESSES (PTI)","( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST","The number of load and store operations per thousand instructions. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address"
+"L1_DC_MISSES (PTI)","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST","The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+"%L1_DC_MISSES","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 100 ) / L1_DC_ACCESSES_ALL","The percentage of L2 cache access requests due to L1 data cache misses with respect to the total number of load and store operations. This also counts the hardware and software prefetches."
+"L1_DC_ACCESS_RATE","L1_DC_ACCESSES_ALL / RETIRED_INST","The L1 Data Cache access rate is the number of L1 Data Cache accesses divided by the total number of retired instructions."
+"L1_DC_MISS_RATE","L2_CACHE_ACCESS_FROM_L1_DC_MISS / RETIRED_INST","The L1 Data Cache miss rate is the number of L1 Data Cache misses divided by the total number of retired instructions."
+"L1_DC_MISS_RATIO","L2_CACHE_ACCESS_FROM_L1_DC_MISS / L1_DC_ACCESSES_ALL","The L1 Data Cache miss ratio is the number of L1 Data Cache misses divided by the total number of L1 Data Cache accesses."
+"L1_DTLB_HITS (PTI)","((L1_DC_ACCESSES_ALL - L1_DTLB_MISSES) * 1000) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) Hits from load-store micro-ops."
+"L1_DTLB_HIT_RATE","(L1_DC_ACCESSES_ALL - L1_DTLB_MISSES) / RETIRED_INST","The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+"L1_DTLB_MISSES (PTI)","( L1_DTLB_MISSES * 1000 ) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) misses from load-store micro-ops."
+"L1_DTLB_MISS_RATE","L1_DTLB_MISSES / RETIRED_INST","The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+"L1_DTLB_REQUESTS (PTI)","( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST","The number of L1 Data Translation Lookaside buffer (DTLB) requests from load-store micro-ops."
+"L1_DTLB_REQUEST_RATE","L1_DC_ACCESSES_ALL / RETIRED_INST","The DTLB request rate is the number of DC accesses divided by the total number of retired instructions."
+"L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)","( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST","The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Thread Count,"4"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CYCLES_NOT_IN_HALT)"
+FUNCTION,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","PACK_128_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)",Module
+"benchmark_runner.exe!0x140009624",141750000.000000,107500000.000000,0.7584,1.3186,481.3953,104.6512,51750000.000000,11250000.000000,21.7391,56500000.000000,0.000000,0.4814,0.1047,0.2174,481.3953,0.4814,0.0000,0.0000,481.3953,0.4814,104.6512,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x140009628",112750000.000000,85250000.000000,0.7561,1.3226,428.1525,108.5044,36500000.000000,9250000.000000,25.3425,47750000.000000,250000.000000,0.4282,0.1085,0.2534,425.2199,0.4252,2.9326,0.0029,428.1525,0.4282,108.5044,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x140009630",59000000.000000,23500000.000000,0.3983,2.5106,478.7234,180.8511,11250000.000000,4250000.000000,37.7778,16500000.000000,0.000000,0.4787,0.1809,0.3778,478.7234,0.4787,0.0000,0.0000,478.7234,0.4787,180.8511,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x14000962b",53000000.000000,32000000.000000,0.6038,1.6562,554.6875,70.3125,17750000.000000,2250000.000000,12.6761,17500000.000000,0.000000,0.5547,0.0703,0.1268,554.6875,0.5547,0.0000,0.0000,554.6875,0.5547,70.3125,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x14000a6e7",27750000.000000,146750000.000000,5.2883,0.1891,64.7359,6.8143,9500000.000000,1000000.000000,10.5263,25250000.000000,0.000000,0.0647,0.0068,0.1053,64.7359,0.0647,0.0000,0.0000,64.7359,0.0647,6.8143,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x14000a6c1",16000000.000000,74500000.000000,4.6562,0.2148,50.3356,3.3557,3750000.000000,250000.000000,6.6667,10750000.000000,0.000000,0.0503,0.0034,0.0667,50.3356,0.0503,0.0000,0.0000,50.3356,0.0503,3.3557,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"ucrtbase.dll!0x1800edf8e",15000000.000000,750000.000000,0.0500,20.0000,1000.0000,0.0000,750000.000000,0.000000,0.0000,0.000000,0.000000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000,"c:\windows\system32\ucrtbase.dll"
+"benchmark_runner.exe!0x14000a6df",13250000.000000,60750000.000000,4.5849,0.2181,65.8436,0.0000,4000000.000000,0.000000,0.0000,8250000.000000,0.000000,0.0658,0.0000,0.0000,65.8436,0.0658,0.0000,0.0000,65.8436,0.0658,0.0000,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"benchmark_runner.exe!0x140009634",12000000.000000,4750000.000000,0.3958,2.5263,684.2105,105.2632,3250000.000000,500000.000000,15.3846,3750000.000000,0.000000,0.6842,0.1053,0.1538,684.2105,0.6842,0.0000,0.0000,684.2105,0.6842,105.2632,"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe"
+"ucrtbase.dll!0x1800edf84",12000000.000000,750000.000000,0.0625,16.0000,1333.3333,0.0000,1000000.000000,0.000000,0.0000,0.000000,0.000000,1.3333,0.0000,0.0000,1333.3333,1.3333,0.0000,0.0000,1333.3333,1.3333,0.0000,"c:\windows\system32\ucrtbase.dll"
+
+"10 HOTTEST PROCESSES (Sort Event - CYCLES_NOT_IN_HALT)"
+PROCESS,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","PACK_128_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)"
+"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe (PID:64076)",514000000.000000,701750000.000000,1.3653,0.7325,228.0014,42.3940,160000000.000000,29750000.000000,18.5938,212250000.000000,250000.000000,0.2280,0.0424,0.1859,227.6452,0.2276,0.3563,0.0004,228.0014,0.2280,42.3940
+
+"10 HOTTEST MODULES (Sort Event - CYCLES_NOT_IN_HALT)"
+MODULE,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","PACK_128_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)"
+"c:\users\choudn3\downloads\ecse_4320\ecse6320-project1-simd\build-gcc-auto\benchmark_runner.exe",466750000.000000,683000000.000000,1.4633,0.6834,218.5212,43.5578,149250000.000000,29750000.000000,19.9330,212250000.000000,250000.000000,0.2185,0.0436,0.1993,218.1552,0.2182,0.3660,0.0004,218.5212,0.2185,43.5578
+"c:\windows\system32\ucrtbase.dll",32750000.000000,8250000.000000,0.2519,3.9697,636.3636,0.0000,5250000.000000,0.000000,0.0000,0.000000,0.000000,0.6364,0.0000,0.0000,636.3636,0.6364,0.0000,0.0000,636.3636,0.6364,0.0000
+"c:\windows\system32\ntdll.dll",12000000.000000,10000000.000000,0.8333,1.2000,525.0000,0.0000,5250000.000000,0.000000,0.0000,0.000000,0.000000,0.5250,0.0000,0.0000,525.0000,0.5250,0.0000,0.0000,525.0000,0.5250,0.0000
+"c:\windows\system32\kernelbase.dll",1250000.000000,250000.000000,0.2000,5.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+"c:\msys64\ucrt64\bin\libstdc++-6.dll",1250000.000000,250000.000000,0.2000,5.0000,1000.0000,0.0000,250000.000000,0.000000,0.0000,0.000000,0.000000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000,0.0000,1000.0000,1.0000,0.0000
+
+"10 HOTTEST THREADS (Sort Event - CYCLES_NOT_IN_HALT)"
+THREAD,"CYCLES_NOT_IN_HALT","RETIRED_INST","IPC","CPI","L1_DC_ACCESSES (PTI)","L1_DC_MISSES (PTI)","L1_DC_ACCESSES_ALL","L2_CACHE_ACCESS_FROM_L1_DC_MISS","%L1_DC_MISSES","PACK_128_UOPS_RETIRED","L1_DTLB_MISSES","L1_DC_ACCESS_RATE","L1_DC_MISS_RATE","L1_DC_MISS_RATIO","L1_DTLB_HITS (PTI)","L1_DTLB_HIT_RATE","L1_DTLB_MISSES (PTI)","L1_DTLB_MISS_RATE","L1_DTLB_REQUESTS (PTI)","L1_DTLB_REQUEST_RATE","L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)",THREAD ID
+"Thread-9952 (PID:64076)",513750000.000000,701750000.000000,1.3659,0.7321,228.0014,42.3940,160000000.000000,29750000.000000,18.5938,212250000.000000,250000.000000,0.2280,0.0424,0.1859,227.6452,0.2276,0.3563,0.0004,228.0014,0.2280,42.3940,"9952"
+"Thread-68624 (PID:64076)",250000.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.000000,0.000000,0.0000,0.000000,0.000000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,"68624"
